@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liuzhq.stock.BaseInfo.mapper.SysHolidayMapper">
+
+    <select id="selectByHolidayDate" resultType="com.liuzhq.stock.BaseInfo.entity.SysHoliday">
+        SELECT * FROM sys_holiday WHERE holiday_date = #{holidayDate}
+    </select>
+
+    <select id="selectByYear" resultType="com.liuzhq.stock.BaseInfo.entity.SysHoliday">
+        SELECT * FROM sys_holiday WHERE year = #{year} ORDER BY holiday_date
+    </select>
+
+    <!-- 批量插入或更新 -->
+    <insert id="batchInsertOrUpdate">
+        INSERT INTO sys_holiday
+        (holiday_date, holiday_name, is_holiday, is_makeup_work, year, month, create_time, update_time)
+        VALUES
+        <foreach collection="list" item="item" separator=",">
+            (
+            #{item.holidayDate},
+            #{item.holidayName},
+            #{item.isHoliday},
+            #{item.isMakeupWork},
+            #{item.year},
+            #{item.month},
+            NOW(),
+            NOW()
+            )
+        </foreach>
+        ON DUPLICATE KEY UPDATE
+        holiday_name = VALUES(holiday_name),
+        is_holiday = VALUES(is_holiday),
+        is_makeup_work = VALUES(is_makeup_work),
+        update_time = NOW()
+    </insert>
+
+</mapper>

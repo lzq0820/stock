@@ -1,0 +1,157 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 继承自定义的 SpringCloud 父工程（核心：复用父工程的依赖版本管理） -->
+    <parent>
+        <groupId>org.example.liuzhq</groupId>
+        <artifactId>SpringCloud</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <!-- 若子模块和父工程在同一目录下，需指定相对路径（根据实际目录结构调整） -->
+        <!-- 例如父工程是根目录，子模块在 BaseInfo 文件夹下，路径为 ../pom.xml -->
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <!-- 子模块自身信息 -->
+    <groupId>com.liuzhq.stock.BaseInfo</groupId>
+    <artifactId>BaseInfo</artifactId>
+    <packaging>jar</packaging>
+    <description>股票等基础信息</description>
+
+    <name>BaseInfo</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <!-- 自定义公共模块依赖（需确保 springcloud-common 模块已正确构建） -->
+        <dependency>
+            <groupId>org.example.liuzhq</groupId>
+            <artifactId>springcloud-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <!-- Spring Boot Web 核心依赖（版本由父工程的 SpringBoot 父依赖管理） -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Lombok（版本由 SpringBoot 父依赖管理） -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- 以下依赖版本均由父工程的 dependencyManagement 管理，无需指定版本 -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.lafa.jsonpath</groupId>
+            <artifactId>json-path</artifactId>
+        </dependency>
+
+        <!-- 可选：Spring Boot 测试启动器（包含 JUnit、Mockito 等，更适配 Spring Boot） -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <!-- Swagger3（接口文档，可选依赖） -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- Swagger第三方UI（可选依赖） -->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>swagger-bootstrap-ui</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+
+        <!-- 若需要更复杂的定时任务（如动态调整cron），可添加 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-quartz</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.netflix.servo</groupId>
+            <artifactId>servo-core</artifactId>
+        </dependency>
+    </dependencies>
+
+    <!-- Spring Boot 打包插件（复用父工程配置，也可单独配置） -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version> <!-- 复用父工程的SpringBoot版本 -->
+                <configuration>
+                    <!-- 必须精准匹配启动类的全限定名 -->
+                    <mainClass>com.liuzhq.stock.BaseInfo.BaseInfoApplication</mainClass>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal> <!-- 生成可执行jar包的关键 -->
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- 可选：指定编译插件，确保源码目录正确 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

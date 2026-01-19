@@ -1,0 +1,84 @@
+{
+  "apis": [
+    {
+      "name": "eastmoney_realtime",
+      "method": "GET",
+      "path": "/api/eastmoney/api/stock/a/realtime",
+      "description": "东方财富实时行情",
+      "provider": "eastmoney",
+      "category": "realtime",
+      "timeout": 30000,
+      "enabled": true
+    },
+    {
+      "name": "eastmoney_statistics",
+      "method": "GET",
+      "path": "/api/eastmoney/api/stock/a/realtime/statistics",
+      "description": "东方财富实时行情统计",
+      "provider": "eastmoney",
+      "category": "statistics",
+      "timeout": 30000,
+      "enabled": true
+    },
+    {
+      "name": "eastmoney_search",
+      "method": "GET",
+      "path": "/api/eastmoney/api/stock/search",
+      "description": "东方财富股票搜索",
+      "provider": "eastmoney",
+      "category": "search",
+      "timeout": 30000,
+      "enabled": true
+    },
+    {
+      "name": "xuangubao_zt_pool",
+      "method": "GET",
+      "path": "/api/xuangubao/stock/pool/zt",
+      "description": "选股宝涨停池",
+      "provider": "xuangubao",
+      "category": "stock_pool",
+      "timeout": 30000,
+      "enabled": true
+    },
+    {
+      "name": "xuangubao_dt_pool",
+      "method": "GET",
+      "path": "/api/xuangubao/stock/pool/dt",
+      "description": "选股宝跌停池",
+      "provider": "xuangubao",
+      "category": "stock_pool",
+      "timeout": 30000,
+      "enabled": true
+    },
+    {
+      "name": "xuangubao_yesterday_zt_pool",
+      "method": "GET",
+      "path": "/api/xuangubao/stock/pool/yesterday_zt",
+      "description": "选股宝昨日涨停池",
+      "provider": "xuangubao",
+      "category": "stock_pool",
+      "timeout": 30000,
+      "enabled": true
+    },
+    {
+      "name": "xuangubao_broken_zt_pool",
+      "method": "GET",
+      "path": "/api/xuangubao/stock/pool/broken_zt",
+      "description": "选股宝炸板池",
+      "provider": "xuangubao",
+      "category": "stock_pool",
+      "timeout": 30000,
+      "enabled": true
+    },
+    {
+      "name": "xuangubao_super_stock_pool",
+      "method": "GET",
+      "path": "/api/xuangubao/stock/pool/super_stock",
+      "description": "选股宝强势股池",
+      "provider": "xuangubao",
+      "category": "stock_pool",
+      "timeout": 30000,
+      "enabled": true
+    }
+  ]
+}

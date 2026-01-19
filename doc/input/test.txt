@@ -1,0 +1,4 @@
+Hello Jython & Java!
+这是测试文件的内容，
+用于验证Java调用Jython读取文件的功能。
+当前时间：2026-01-14

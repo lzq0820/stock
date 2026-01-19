@@ -1,0 +1,1182 @@
+# 这个文档是上传给ai用于统计分析数据和生成表结构用
+1.涨停数据
+Request URL
+https://flash-api.xuangubao.com.cn/api/pool/detail?pool_name=limit_up
+Request Method
+GET
+{
+    "code": 20000,
+    "message": "OK",
+    "data": [
+        {
+            "break_limit_down_times": 0,
+            "break_limit_up_times": 3,
+            "buy_lock_volume_ratio": 0.0002897804,
+            "change_percent": 0.1000156887,
+            "first_break_limit_down": 0,
+            "first_break_limit_up": 1768543905,
+            "first_limit_down": 0,
+            "first_limit_up": 1768542549,
+            "is_new_stock": false,
+            "issue_price": 23.26,
+            "last_break_limit_down": 0,
+            "last_break_limit_up": 1768546110,
+            "last_limit_down": 0,
+            "last_limit_up": 1768546569,
+            "limit_down_days": 0,
+            "limit_timeline": {
+                "items": [
+                    {
+                        "timestamp": 1768542549,
+                        "status": 1
+                    },
+                    {
+                        "timestamp": 1768543905,
+                        "status": 2
+                    },
+                    {
+                        "timestamp": 1768544502,
+                        "status": 1
+                    },
+                    {
+                        "timestamp": 1768545720,
+                        "status": 2
+                    },
+                    {
+                        "timestamp": 1768545762,
+                        "status": 1
+                    },
+                    {
+                        "timestamp": 1768546110,
+                        "status": 2
+                    },
+                    {
+                        "timestamp": 1768546569,
+                        "status": 1
+                    }
+                ]
+            },
+            "limit_up_days": 1,
+            "listed_date": 1471449600,
+            "m_days_n_boards_boards": 0,
+            "m_days_n_boards_days": 0,
+            "mtm": 0.0044409426,
+            "nearly_new_acc_pcp": 0,
+            "nearly_new_break_days": 0,
+            "new_stock_acc_pcp": 11.0576096303,
+            "new_stock_break_limit_up": 0,
+            "new_stock_limit_up_days": 0,
+            "new_stock_limit_up_price_before_broken": 0,
+            "non_restricted_capital": 187303748681.56,
+            "price": 280.46,
+            "sell_lock_volume_ratio": 0,
+            "stock_chi_name": "兆易创新",
+            "stock_type": 0,
+            "surge_reason": {
+                "symbol": "603986.SS",
+                "stock_reason": "国内存储龙头，产品包括DDR3L/DDR4/LPDDR4X等，投资23亿持有长鑫1.88%股权",
+                "related_plates": [
+                    {
+                        "plate_id": 31765737,
+                        "plate_name": "国产芯片",
+                        "plate_reason": "台积电业绩超预期；海外存储龙头连创新高"
+                    }
+                ]
+            },
+            "symbol": "603986.SS",
+            "total_capital": 195414754249.46,
+            "turnover_ratio": 0.0828578948,
+            "volume_bias_ratio": 1.368361558,
+            "yesterday_break_limit_up_times": 0,
+            "yesterday_first_limit_up": 0,
+            "yesterday_last_limit_up": 0,
+            "yesterday_limit_down_days": 0,
+            "yesterday_limit_up_days": 0
+        }
+    ]
+}
+展示内容
+<div data-v-56d816b1="" data-v-76cc40d2="" class="table-container">
+    <div data-v-56d816b1="" class="fixed-head">
+        <table data-v-56d816b1="" class="table hit-pool__table fixed">
+            <colgroup data-v-56d816b1="">
+                <col data-v-56d816b1="" style="width: 4%;">
+                <col data-v-56d816b1="" style="width: 9%;">
+                <col data-v-56d816b1="" style="width: 19%;">
+                <col data-v-56d816b1="" style="width: 7%;">
+                <col data-v-56d816b1="" style="width: 7%;">
+                <col data-v-56d816b1="" style="width: 7%;">
+                <col data-v-56d816b1="" style="width: 7%;">
+                <col data-v-56d816b1="" style="width: 7%;">
+                <col data-v-56d816b1="" style="width: 7%;">
+                <col data-v-56d816b1="" style="width: 7%;">
+                <col data-v-56d816b1="" style="width: 7%;">
+                <col data-v-56d816b1="" style="width: 6%;">
+                <col data-v-56d816b1="" style="width: 6%;">
+            </colgroup>
+            <thead data-v-56d816b1="" class="hit-pool__table-head">
+            <tr data-v-56d816b1="">
+                <th data-v-56d816b1=""><abbr data-v-56d816b1="" title="序号">序号</abbr></th> <!---->
+                <th data-v-56d816b1=""><abbr data-v-56d816b1="" title="股票名称">股票名称</abbr></th> <!---->
+                <th data-v-56d816b1=""><abbr data-v-56d816b1="" title="理由分析">理由分析</abbr></th> <!----><!---->
+                <th data-v-9f36643a="" data-v-56d816b1="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="最新价">最新价</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-56d816b1="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="涨跌幅">涨跌幅</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-56d816b1="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="封单比">封单比</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-56d816b1="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="换手率">换手率</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-56d816b1="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="流通市值">流通市值</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-56d816b1="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="总市值">总市值</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-56d816b1="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="首次封板">首次封板</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-56d816b1="" target="cur_price" class="stock-sort sort_target"><abbr
+                        data-v-9f36643a="" title="最后封板">最后封板</abbr> <span data-v-9f36643a="" class="icon"><i
+                        data-v-9f36643a="" class="iconfont icon-desc"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-56d816b1="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="开板">开板</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-56d816b1="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="连板">连板</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <div data-v-56d816b1="" class="ding-scroll-main">
+        <table data-v-56d816b1="" class="table hit-pool__table">
+            <colgroup data-v-56d816b1="">
+                <col data-v-56d816b1="" style="width: 4%;">
+                <col data-v-56d816b1="" style="width: 9%;">
+                <col data-v-56d816b1="" style="width: 19%;">
+                <col data-v-56d816b1="" style="width: 7%;">
+                <col data-v-56d816b1="" style="width: 7%;">
+                <col data-v-56d816b1="" style="width: 7%;">
+                <col data-v-56d816b1="" style="width: 7%;">
+                <col data-v-56d816b1="" style="width: 7%;">
+                <col data-v-56d816b1="" style="width: 7%;">
+                <col data-v-56d816b1="" style="width: 7%;">
+                <col data-v-56d816b1="" style="width: 7%;">
+                <col data-v-56d816b1="" style="width: 6%;">
+                <col data-v-56d816b1="" style="width: 6%;">
+            </colgroup>
+            <thead data-v-56d816b1="" class="hit-pool__table-head">
+            <tr data-v-56d816b1="">
+                <th data-v-56d816b1=""><abbr data-v-56d816b1="" title="序号">序号</abbr></th> <!---->
+                <th data-v-56d816b1=""><abbr data-v-56d816b1="" title="股票名称">股票名称</abbr></th> <!---->
+                <th data-v-56d816b1=""><abbr data-v-56d816b1="" title="理由分析">理由分析</abbr></th> <!----><!---->
+                <th data-v-9f36643a="" data-v-56d816b1="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="最新价">最新价</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-56d816b1="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="涨跌幅">涨跌幅</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-56d816b1="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="封单比">封单比</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-56d816b1="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="换手率">换手率</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-56d816b1="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="流通市值">流通市值</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-56d816b1="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="总市值">总市值</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-56d816b1="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="首次封板">首次封板</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-56d816b1="" target="cur_price" class="stock-sort sort_target"><abbr
+                        data-v-9f36643a="" title="最后封板">最后封板</abbr> <span data-v-9f36643a="" class="icon"><i
+                        data-v-9f36643a="" class="iconfont icon-desc"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-56d816b1="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="开板">开板</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-56d816b1="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="连板">连板</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th>
+            </tr>
+            </thead>
+            <tbody data-v-56d816b1="" class="table hit-pool__table-body">
+            <tr data-v-56d816b1="" class="">
+                <td data-v-56d816b1="" class="stock-index">58</td>
+                <td data-v-56d816b1="" target="603986.SS" class="stock-title"><a data-v-56d816b1="" target="_blank"
+                                                                                 href="/stock/603986.SS"><span
+                        data-v-56d816b1="" class="stock-title-name">兆易创新</span> <br data-v-56d816b1="">
+                    603986
+                </a></td>
+                <td data-v-56d816b1="" class="stock-reason locked"><span data-v-56d816b1="" class="line-clamp"><i
+                        data-v-56d816b1="" class="iconfont"></i> <p data-v-56d816b1="" class="stock-reason-login">请登录后查看</p></span>
+                </td>
+                <td data-v-56d816b1="" target="price" class=""><span data-v-56d816b1="" class="-market-color--rise">280.46</span>
+                </td>
+                <td data-v-56d816b1="" target="change_percent" class=""><span data-v-56d816b1=""
+                                                                              class="-market-color--rise">+10.00%</span>
+                </td>
+                <td data-v-56d816b1="" target="buy_lock_volume_ratio" class="">
+                    0.03%
+                </td>
+                <td data-v-56d816b1="" target="turnover_ratio" class="">
+                    8.29%
+                </td>
+                <td data-v-56d816b1="" target="non_restricted_capital" class="">
+                    1873.0亿
+                </td>
+                <td data-v-56d816b1="" target="total_capital" class="">
+                    1954.1亿
+                </td>
+                <td data-v-56d816b1="" target="first_limit_up" class="">
+                    13:49:09
+                </td>
+                <td data-v-56d816b1="" target="last_limit_up" class="sort_target">
+                    14:56:09
+                </td>
+                <td data-v-56d816b1="" target="break_limit_up_times" class="">
+                    3
+                </td>
+                <td data-v-56d816b1="" target="limit_up_days" class="">
+                    首板
+                </td>
+            </tr>
+            </tbody>
+        </table> <!----></div>
+</div>
+
+2.昨日涨停
+Request URL
+https://flash-api.xuangubao.com.cn/api/pool/detail?pool_name=yesterday_limit_up
+Request Method
+GET
+{
+    "code": 20000,
+    "message": "OK",
+    "data": [
+        {
+            "break_limit_down_times": 0,
+            "break_limit_up_times": 0,
+            "buy_lock_volume_ratio": 0.0013524271,
+            "change_percent": 0.1350726552,
+            "first_break_limit_down": 0,
+            "first_break_limit_up": 0,
+            "first_limit_down": 0,
+            "first_limit_up": 0,
+            "is_new_stock": false,
+            "issue_price": 18.08,
+            "last_break_limit_down": 0,
+            "last_break_limit_up": 0,
+            "last_limit_down": 0,
+            "last_limit_up": 0,
+            "limit_down_days": 0,
+            "limit_timeline": null,
+            "limit_up_days": 0,
+            "listed_date": 1691596800,
+            "m_days_n_boards_boards": 0,
+            "m_days_n_boards_days": 0,
+            "mtm": 0,
+            "nearly_new_acc_pcp": 0,
+            "nearly_new_break_days": 0,
+            "new_stock_acc_pcp": 0.9009955752,
+            "new_stock_break_limit_up": 0,
+            "new_stock_limit_up_days": 0,
+            "new_stock_limit_up_price_before_broken": 0,
+            "non_restricted_capital": 5332133272.9,
+            "price": 34.37,
+            "sell_lock_volume_ratio": 0.0037386298,
+            "stock_chi_name": "蓝箭电子",
+            "stock_type": 4,
+            "surge_reason": {
+                "symbol": "301348.SZ",
+                "stock_reason": "公司主营半导体封装测试业务，产品分立器件和集成电路产品直接或间接用在华为产品上",
+                "related_plates": [
+                    {
+                        "plate_id": 31765737,
+                        "plate_name": "国产芯片",
+                        "plate_reason": "台积电业绩超预期"
+                    }
+                ]
+            },
+            "symbol": "301348.SZ",
+            "total_capital": 8248799999.999999,
+            "turnover_ratio": 0.5424528054,
+            "volume_bias_ratio": 3.3324335776,
+            "yesterday_break_limit_up_times": 0,
+            "yesterday_first_limit_up": 1768456329,
+            "yesterday_last_limit_up": 1768456329,
+            "yesterday_limit_down_days": 0,
+            "yesterday_limit_up_days": 1
+        }
+    ]
+}
+展示内容
+<div data-v-7cb6a736="" data-v-76cc40d2="" class="table-container">
+    <div data-v-7cb6a736="" class="fixed-head">
+        <table data-v-7cb6a736="" class="table hit-pool__table fixed">
+            <colgroup data-v-7cb6a736="">
+                <col data-v-7cb6a736="" style="width: 4%;">
+                <col data-v-7cb6a736="" style="width: 7%;">
+                <col data-v-7cb6a736="" style="width: 19%;">
+                <col data-v-7cb6a736="" style="width: 7%;">
+                <col data-v-7cb6a736="" style="width: 7%;">
+                <col data-v-7cb6a736="" style="width: 7%;">
+                <col data-v-7cb6a736="" style="width: 7%;">
+                <col data-v-7cb6a736="" style="width: 7%;">
+                <col data-v-7cb6a736="" style="width: 10%;">
+                <col data-v-7cb6a736="" style="width: 10%;">
+                <col data-v-7cb6a736="" style="width: 7%;">
+                <col data-v-7cb6a736="" style="width: 7%;">
+            </colgroup>
+            <thead data-v-7cb6a736="" class="hit-pool__table-head">
+            <tr data-v-7cb6a736="">
+                <th data-v-7cb6a736=""><abbr data-v-7cb6a736="" title="序号">序号</abbr></th> <!---->
+                <th data-v-7cb6a736=""><abbr data-v-7cb6a736="" title="股票名称">股票名称</abbr></th> <!---->
+                <th data-v-7cb6a736=""><abbr data-v-7cb6a736="" title="理由分析">理由分析</abbr></th> <!----><!---->
+                <th data-v-9f36643a="" data-v-7cb6a736="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="最新价">最新价</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7cb6a736="" target="cur_price" class="stock-sort sort_target"><abbr
+                        data-v-9f36643a="" title="涨跌幅">涨跌幅</abbr> <span data-v-9f36643a="" class="icon"><i
+                        data-v-9f36643a="" class="iconfont icon-desc"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7cb6a736="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="换手率">换手率</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7cb6a736="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="流通市值">流通市值</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7cb6a736="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="总市值">总市值</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7cb6a736="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="昨日首次封板">昨日<br>首次封板</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7cb6a736="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="昨日最后封板">昨日<br>最后封板</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7cb6a736="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="昨日开板数">昨日<br>开板数</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7cb6a736="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="昨日连板数">昨日<br>连板数</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <div data-v-7cb6a736="" class="ding-scroll-main">
+        <table data-v-7cb6a736="" class="table hit-pool__table">
+            <colgroup data-v-7cb6a736="">
+                <col data-v-7cb6a736="" style="width: 4%;">
+                <col data-v-7cb6a736="" style="width: 7%;">
+                <col data-v-7cb6a736="" style="width: 19%;">
+                <col data-v-7cb6a736="" style="width: 7%;">
+                <col data-v-7cb6a736="" style="width: 7%;">
+                <col data-v-7cb6a736="" style="width: 7%;">
+                <col data-v-7cb6a736="" style="width: 7%;">
+                <col data-v-7cb6a736="" style="width: 7%;">
+                <col data-v-7cb6a736="" style="width: 10%;">
+                <col data-v-7cb6a736="" style="width: 10%;">
+                <col data-v-7cb6a736="" style="width: 7%;">
+                <col data-v-7cb6a736="" style="width: 7%;">
+            </colgroup>
+            <thead data-v-7cb6a736="" class="hit-pool__table-head">
+            <tr data-v-7cb6a736="">
+                <th data-v-7cb6a736=""><abbr data-v-7cb6a736="" title="序号">序号</abbr></th> <!---->
+                <th data-v-7cb6a736=""><abbr data-v-7cb6a736="" title="股票名称">股票名称</abbr></th> <!---->
+                <th data-v-7cb6a736=""><abbr data-v-7cb6a736="" title="理由分析">理由分析</abbr></th> <!----><!---->
+                <th data-v-9f36643a="" data-v-7cb6a736="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="最新价">最新价</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7cb6a736="" target="cur_price" class="stock-sort sort_target"><abbr
+                        data-v-9f36643a="" title="涨跌幅">涨跌幅</abbr> <span data-v-9f36643a="" class="icon"><i
+                        data-v-9f36643a="" class="iconfont icon-desc"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7cb6a736="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="换手率">换手率</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7cb6a736="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="流通市值">流通市值</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7cb6a736="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="总市值">总市值</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7cb6a736="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="昨日首次封板">昨日<br>首次封板</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7cb6a736="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="昨日最后封板">昨日<br>最后封板</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7cb6a736="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="昨日开板数">昨日<br>开板数</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7cb6a736="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="昨日连板数">昨日<br>连板数</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th>
+            </tr>
+            </thead>
+            <tbody data-v-7cb6a736="" class="table hit-pool__table-body">
+            <tr data-v-7cb6a736="">
+                <td data-v-7cb6a736="" class="stock-index">55</td>
+                <td data-v-7cb6a736="" target="301348.SZ" class="stock-title"><a data-v-7cb6a736="" target="_blank"
+                                                                                 href="/stock/301348.SZ"><span
+                        data-v-7cb6a736="" class="stock-title-name">蓝箭电子</span> <br data-v-7cb6a736="">
+                    301348
+                </a></td>
+                <td data-v-7cb6a736="" class="stock-reason locked"><span data-v-7cb6a736="" class="line-clamp"><i
+                        data-v-7cb6a736="" class="iconfont"></i> <p data-v-7cb6a736="" class="stock-reason-login">请登录后查看</p></span>
+                </td>
+                <td data-v-7cb6a736="" target="price" class=""><span data-v-7cb6a736="" class="-market-color--rise">34.37</span>
+                </td>
+                <td data-v-7cb6a736="" target="change_percent" class="sort_target"><span data-v-7cb6a736=""
+                                                                                         class="-market-color--rise">+13.51%</span>
+                </td>
+                <td data-v-7cb6a736="" target="turnover_ratio" class="">
+                    54.25%
+                </td>
+                <td data-v-7cb6a736="" target="non_restricted_capital" class="">
+                    53.3亿
+                </td>
+                <td data-v-7cb6a736="" target="total_capital" class="">
+                    82.5亿
+                </td>
+                <td data-v-7cb6a736="" target="yesterday_first_limit_up" class="">
+                    13:52:09
+                </td>
+                <td data-v-7cb6a736="" target="yesterday_last_limit_up" class="">
+                    13:52:09
+                </td>
+                <td data-v-7cb6a736="" target="yesterday_break_limit_up_times" class="">
+                    -
+                </td>
+                <td data-v-7cb6a736="" target="yesterday_limit_up_days" class="">
+                    首板
+                </td>
+            </tr>
+            </tbody>
+        </table> <!----></div>
+</div>
+
+3.跌停池
+Request URL
+https://flash-api.xuangubao.com.cn/api/pool/detail?pool_name=limit_down
+Request Method
+GET
+{
+    "code": 20000,
+    "message": "OK",
+    "data": [
+        {
+            "break_limit_down_times": 1,
+            "break_limit_up_times": 0,
+            "buy_lock_volume_ratio": 0,
+            "change_percent": -0.1001094092,
+            "first_break_limit_down": 1768541721,
+            "first_break_limit_up": 0,
+            "first_limit_down": 1768541703,
+            "first_limit_up": 0,
+            "is_new_stock": false,
+            "issue_price": 2.5,
+            "last_break_limit_down": 1768541721,
+            "last_break_limit_up": 0,
+            "last_limit_down": 1768546614,
+            "last_limit_up": 0,
+            "limit_down_days": 1,
+            "limit_timeline": {
+                "items": [
+                    {
+                        "timestamp": 1768541703,
+                        "status": 3
+                    },
+                    {
+                        "timestamp": 1768541721,
+                        "status": 4
+                    },
+                    {
+                        "timestamp": 1768546614,
+                        "status": 3
+                    }
+                ]
+            },
+            "limit_up_days": 0,
+            "listed_date": 826560000,
+            "m_days_n_boards_boards": 3,
+            "m_days_n_boards_days": 5,
+            "mtm": -0.0102286402,
+            "nearly_new_acc_pcp": 0,
+            "nearly_new_break_days": 0,
+            "new_stock_acc_pcp": 5.58,
+            "new_stock_break_limit_up": 0,
+            "new_stock_limit_up_days": 0,
+            "new_stock_limit_up_price_before_broken": 0,
+            "non_restricted_capital": 5897048130.05,
+            "price": 16.45,
+            "sell_lock_volume_ratio": 0.0030645426,
+            "stock_chi_name": "德龙汇能",
+            "stock_type": 0,
+            "surge_reason": null,
+            "symbol": "000593.SZ",
+            "total_capital": 5899480098.05,
+            "turnover_ratio": 0.1830414359,
+            "volume_bias_ratio": 1.5670350618,
+            "yesterday_break_limit_up_times": 0,
+            "yesterday_first_limit_up": 0,
+            "yesterday_last_limit_up": 0,
+            "yesterday_limit_down_days": 0,
+            "yesterday_limit_up_days": 0
+        }
+    ]
+}
+展示内容
+<div data-v-d765d45e="" data-v-76cc40d2="" class="table-container">
+    <div data-v-d765d45e="" class="fixed-head">
+        <table data-v-d765d45e="" class="table hit-pool__table fixed">
+            <colgroup data-v-d765d45e="">
+                <col data-v-d765d45e="" style="width: 4%;">
+                <col data-v-d765d45e="" style="width: 7%;">
+                <col data-v-d765d45e="" style="width: 9%;">
+                <col data-v-d765d45e="" style="width: 9%;">
+                <col data-v-d765d45e="" style="width: 9%;">
+                <col data-v-d765d45e="" style="width: 9%;">
+                <col data-v-d765d45e="" style="width: 9%;">
+                <col data-v-d765d45e="" style="width: 9%;">
+                <col data-v-d765d45e="" style="width: 9%;">
+                <col data-v-d765d45e="" style="width: 9%;">
+                <col data-v-d765d45e="" style="width: 9%;">
+                <col data-v-d765d45e="" style="width: 8%;">
+            </colgroup>
+            <thead data-v-d765d45e="" class="hit-pool__table-head">
+            <tr data-v-d765d45e="">
+                <th data-v-d765d45e=""><abbr data-v-d765d45e="" title="序号">序号</abbr></th> <!---->
+                <th data-v-d765d45e=""><abbr data-v-d765d45e="" title="股票名称">股票名称</abbr></th> <!----><!---->
+                <th data-v-9f36643a="" data-v-d765d45e="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="最新价">最新价</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-d765d45e="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="涨跌幅">涨跌幅</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-d765d45e="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="封单比">封单比</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-d765d45e="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="换手率">换手率</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-d765d45e="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="流通市值">流通市值</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-d765d45e="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="总市值">总市值</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-d765d45e="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="首次封板">首次封板</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-d765d45e="" target="cur_price" class="stock-sort sort_target"><abbr
+                        data-v-9f36643a="" title="最后封板">最后封板</abbr> <span data-v-9f36643a="" class="icon"><i
+                        data-v-9f36643a="" class="iconfont icon-desc"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-d765d45e="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="开板数">开板数</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-d765d45e="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="连板数">连板数</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <div data-v-d765d45e="" class="ding-scroll-main">
+        <table data-v-d765d45e="" class="table hit-pool__table">
+            <colgroup data-v-d765d45e="">
+                <col data-v-d765d45e="" style="width: 4%;">
+                <col data-v-d765d45e="" style="width: 7%;">
+                <col data-v-d765d45e="" style="width: 9%;">
+                <col data-v-d765d45e="" style="width: 9%;">
+                <col data-v-d765d45e="" style="width: 9%;">
+                <col data-v-d765d45e="" style="width: 9%;">
+                <col data-v-d765d45e="" style="width: 9%;">
+                <col data-v-d765d45e="" style="width: 9%;">
+                <col data-v-d765d45e="" style="width: 9%;">
+                <col data-v-d765d45e="" style="width: 9%;">
+                <col data-v-d765d45e="" style="width: 9%;">
+                <col data-v-d765d45e="" style="width: 8%;">
+            </colgroup>
+            <thead data-v-d765d45e="" class="hit-pool__table-head">
+            <tr data-v-d765d45e="">
+                <th data-v-d765d45e=""><abbr data-v-d765d45e="" title="序号">序号</abbr></th> <!---->
+                <th data-v-d765d45e=""><abbr data-v-d765d45e="" title="股票名称">股票名称</abbr></th> <!----><!---->
+                <th data-v-9f36643a="" data-v-d765d45e="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="最新价">最新价</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-d765d45e="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="涨跌幅">涨跌幅</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-d765d45e="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="封单比">封单比</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-d765d45e="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="换手率">换手率</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-d765d45e="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="流通市值">流通市值</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-d765d45e="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="总市值">总市值</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-d765d45e="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="首次封板">首次封板</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-d765d45e="" target="cur_price" class="stock-sort sort_target"><abbr
+                        data-v-9f36643a="" title="最后封板">最后封板</abbr> <span data-v-9f36643a="" class="icon"><i
+                        data-v-9f36643a="" class="iconfont icon-desc"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-d765d45e="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="开板数">开板数</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-d765d45e="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="连板数">连板数</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th>
+            </tr>
+            </thead>
+            <tbody data-v-d765d45e="" class="table hit-pool__table-body">
+            <tr data-v-d765d45e="">
+                <td data-v-d765d45e="" class="stock-index">46</td>
+                <td data-v-d765d45e="" target="000593.SZ" class="stock-title"><a data-v-d765d45e="" target="_blank"
+                                                                                 href="/stock/000593.SZ"><span
+                        data-v-d765d45e="" class="stock-title-name">德龙汇能</span><br data-v-d765d45e="">000593</a>
+                </td>
+                <td data-v-d765d45e="" target="price" class=""><span data-v-d765d45e="" class="-market-color--decline">16.45</span>
+                </td>
+                <td data-v-d765d45e="" target="change_percent" class=""><span data-v-d765d45e=""
+                                                                              class="-market-color--decline">-10.01%</span>
+                </td>
+                <td data-v-d765d45e="" target="sell_lock_volume_ratio" class="">0.3%</td>
+                <td data-v-d765d45e="" target="turnover_ratio" class="">18.30%</td>
+                <td data-v-d765d45e="" target="non_restricted_capital" class="">59.0亿</td>
+                <td data-v-d765d45e="" target="total_capital" class="">59.0亿</td>
+                <td data-v-d765d45e="" target="first_limit_down" class="">13:35:03</td>
+                <td data-v-d765d45e="" target="last_limit_down" class="sort_target">14:56:54</td>
+                <td data-v-d765d45e="" target="break_limit_down_times" class="">1</td>
+                <td data-v-d765d45e="" target="limit_down_days" class="">首板</td>
+            </tr>
+            </tbody>
+        </table> <!----></div>
+</div>
+
+
+4.炸板池
+Request URL
+https://flash-api.xuangubao.com.cn/api/pool/detail?pool_name=limit_up_broken
+Request Method
+GET
+
+{
+    "code": 20000,
+    "message": "OK",
+    "data": [
+        {
+            "break_limit_down_times": 0,
+            "break_limit_up_times": 1,
+            "buy_lock_volume_ratio": 0.0000017503,
+            "change_percent": 0.1549902153,
+            "first_break_limit_down": 0,
+            "first_break_limit_up": 1768546545,
+            "first_limit_down": 0,
+            "first_limit_up": 1768532967,
+            "is_new_stock": false,
+            "issue_price": 11,
+            "last_break_limit_down": 0,
+            "last_break_limit_up": 1768546545,
+            "last_limit_down": 0,
+            "last_limit_up": 1768532967,
+            "limit_down_days": 0,
+            "limit_timeline": {
+                "items": [
+                    {
+                        "timestamp": 1768532967,
+                        "status": 1
+                    },
+                    {
+                        "timestamp": 1768546545,
+                        "status": 2
+                    }
+                ]
+            },
+            "limit_up_days": 0,
+            "listed_date": 1498665600,
+            "m_days_n_boards_boards": 0,
+            "m_days_n_boards_days": 0,
+            "mtm": -0.0375081539,
+            "nearly_new_acc_pcp": 0,
+            "nearly_new_break_days": 0,
+            "new_stock_acc_pcp": 1.6827272727,
+            "new_stock_break_limit_up": 0,
+            "new_stock_limit_up_days": 0,
+            "new_stock_limit_up_price_before_broken": 0,
+            "non_restricted_capital": 5385573140.87,
+            "price": 29.51,
+            "sell_lock_volume_ratio": 0.0027992858,
+            "stock_chi_name": "沪宁股份",
+            "stock_type": 4,
+            "surge_reason": {
+                "symbol": "300669.SZ",
+                "stock_reason": "电梯安全部件制造商；公司4000万元投资上海虹剑光电事项已完成交割，后者是一家专注于特种光源研发及生产的科技企业，在光学、激光技术及半导体电子领域积累了丰富的技术成果和经验",
+                "related_plates": [
+                    {
+                        "plate_name": "其他"
+                    },
+                    {
+                        "plate_name": "国产芯片",
+                        "plate_reason": "台积电业绩超预期；海外存储龙头连创新高"
+                    }
+                ]
+            },
+            "symbol": "300669.SZ",
+            "total_capital": 5686740072.26,
+            "turnover_ratio": 0.0608168594,
+            "volume_bias_ratio": 4.9551202722,
+            "yesterday_break_limit_up_times": 0,
+            "yesterday_first_limit_up": 0,
+            "yesterday_last_limit_up": 0,
+            "yesterday_limit_down_days": 0,
+            "yesterday_limit_up_days": 0
+        }
+    ]
+}
+展示内容
+<div data-v-7a4c9238="" data-v-76cc40d2="" class="table-container">
+    <div data-v-7a4c9238="" class="fixed-head">
+        <table data-v-7a4c9238="" class="table hit-pool__table fixed">
+            <colgroup data-v-7a4c9238="">
+                <col data-v-7a4c9238="" style="width: 4%;">
+                <col data-v-7a4c9238="" style="width: 9%;">
+                <col data-v-7a4c9238="" style="width: 19%;">
+                <col data-v-7a4c9238="" style="width: 7%;">
+                <col data-v-7a4c9238="" style="width: 7%;">
+                <col data-v-7a4c9238="" style="width: 7%;">
+                <col data-v-7a4c9238="" style="width: 7%;">
+                <col data-v-7a4c9238="" style="width: 7%;">
+                <col data-v-7a4c9238="" style="width: 7%;">
+                <col data-v-7a4c9238="" style="width: 7%;">
+                <col data-v-7a4c9238="" style="width: 7%;">
+                <col data-v-7a4c9238="" style="width: 6%;">
+                <col data-v-7a4c9238="" style="width: 6%;">
+            </colgroup>
+            <thead data-v-7a4c9238="" class="hit-pool__table-head">
+            <tr data-v-7a4c9238="">
+                <th data-v-7a4c9238=""><abbr data-v-7a4c9238="" title="序号">序号</abbr></th> <!---->
+                <th data-v-7a4c9238=""><abbr data-v-7a4c9238="" title="股票名称">股票名称</abbr></th> <!---->
+                <th data-v-7a4c9238=""><abbr data-v-7a4c9238="" title="理由分析">理由分析</abbr></th> <!----><!---->
+                <th data-v-9f36643a="" data-v-7a4c9238="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="最新价">最新价</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7a4c9238="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="涨跌幅">涨跌幅</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7a4c9238="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="换手率">换手率</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7a4c9238="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="流通市值">流通市值</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7a4c9238="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="总市值">总市值</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7a4c9238="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="首次封板">首次封板</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7a4c9238="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="最后封板">最后封板</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7a4c9238="" target="cur_price" class="stock-sort sort_target"><abbr
+                        data-v-9f36643a="" title="最后炸板">最后炸板</abbr> <span data-v-9f36643a="" class="icon"><i
+                        data-v-9f36643a="" class="iconfont icon-desc"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7a4c9238="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="开板">开板</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7a4c9238="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="连板">连板</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <div data-v-7a4c9238="" class="ding-scroll-main">
+        <table data-v-7a4c9238="" class="table hit-pool__table">
+            <colgroup data-v-7a4c9238="">
+                <col data-v-7a4c9238="" style="width: 4%;">
+                <col data-v-7a4c9238="" style="width: 9%;">
+                <col data-v-7a4c9238="" style="width: 19%;">
+                <col data-v-7a4c9238="" style="width: 7%;">
+                <col data-v-7a4c9238="" style="width: 7%;">
+                <col data-v-7a4c9238="" style="width: 7%;">
+                <col data-v-7a4c9238="" style="width: 7%;">
+                <col data-v-7a4c9238="" style="width: 7%;">
+                <col data-v-7a4c9238="" style="width: 7%;">
+                <col data-v-7a4c9238="" style="width: 7%;">
+                <col data-v-7a4c9238="" style="width: 7%;">
+                <col data-v-7a4c9238="" style="width: 6%;">
+                <col data-v-7a4c9238="" style="width: 6%;">
+            </colgroup>
+            <thead data-v-7a4c9238="" class="hit-pool__table-head">
+            <tr data-v-7a4c9238="">
+                <th data-v-7a4c9238=""><abbr data-v-7a4c9238="" title="序号">序号</abbr></th> <!---->
+                <th data-v-7a4c9238=""><abbr data-v-7a4c9238="" title="股票名称">股票名称</abbr></th> <!---->
+                <th data-v-7a4c9238=""><abbr data-v-7a4c9238="" title="理由分析">理由分析</abbr></th> <!----><!---->
+                <th data-v-9f36643a="" data-v-7a4c9238="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="最新价">最新价</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7a4c9238="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="涨跌幅">涨跌幅</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7a4c9238="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="换手率">换手率</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7a4c9238="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="流通市值">流通市值</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7a4c9238="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="总市值">总市值</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7a4c9238="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="首次封板">首次封板</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7a4c9238="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="最后封板">最后封板</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7a4c9238="" target="cur_price" class="stock-sort sort_target"><abbr
+                        data-v-9f36643a="" title="最后炸板">最后炸板</abbr> <span data-v-9f36643a="" class="icon"><i
+                        data-v-9f36643a="" class="iconfont icon-desc"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7a4c9238="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="开板">开板</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-7a4c9238="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="连板">连板</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th>
+            </tr>
+            </thead>
+            <tbody data-v-7a4c9238="" class="table hit-pool__table-body">
+            <tr data-v-7a4c9238="">
+                <td data-v-7a4c9238="" class="stock-index">39</td>
+                <td data-v-7a4c9238="" target="300669.SZ" class="stock-title"><a data-v-7a4c9238="" target="_blank"
+                                                                                 href="/stock/300669.SZ"><span
+                        data-v-7a4c9238="" class="stock-title-name">沪宁股份</span> <br data-v-7a4c9238="">
+                    300669
+                </a></td>
+                <td data-v-7a4c9238="" class="stock-reason locked"><span data-v-7a4c9238="" class="line-clamp"><i
+                        data-v-7a4c9238="" class="iconfont"></i> <p data-v-7a4c9238="" class="stock-reason-login">请登录后查看</p></span>
+                </td>
+                <td data-v-7a4c9238="" target="price" class=""><span data-v-7a4c9238="" class="-market-color--rise">29.51</span>
+                </td>
+                <td data-v-7a4c9238="" target="change_percent" class=""><span data-v-7a4c9238=""
+                                                                              class="-market-color--rise">+15.50%</span>
+                </td>
+                <td data-v-7a4c9238="" target="turnover_ratio" class="">
+                    6.08%
+                </td>
+                <td data-v-7a4c9238="" target="non_restricted_capital" class="">
+                    53.9亿
+                </td>
+                <td data-v-7a4c9238="" target="total_capital" class="">
+                    56.9亿
+                </td>
+                <td data-v-7a4c9238="" target="first_limit_up" class="">
+                    11:09:27
+                </td>
+                <td data-v-7a4c9238="" target="last_limit_up" class="">
+                    11:09:27
+                </td>
+                <td data-v-7a4c9238="" target="last_break_limit_up" class="sort_target">
+                    14:55:45
+                </td>
+                <td data-v-7a4c9238="" target="break_limit_up_times" class="">
+                    1
+                </td>
+                <td data-v-7a4c9238="" target="yesterday_limit_up_days" class="">
+                    -
+                </td>
+            </tr>
+            </tbody>
+        </table> <!----></div>
+</div>
+
+5.强势股池
+Request URL
+https://flash-api.xuangubao.com.cn/api/pool/detail?pool_name=super_stock
+Request Method
+GET
+
+{
+    "code": 20000,
+    "message": "OK",
+    "data": [
+        {
+            "break_limit_down_times": 0,
+            "break_limit_up_times": 0,
+            "buy_lock_volume_ratio": 0.1053340919,
+            "change_percent": 0.1000199243,
+            "first_break_limit_down": 0,
+            "first_break_limit_up": 0,
+            "first_limit_down": 0,
+            "first_limit_up": 1768527021,
+            "is_new_stock": false,
+            "issue_price": 19.77,
+            "last_break_limit_down": 0,
+            "last_break_limit_up": 0,
+            "last_limit_down": 0,
+            "last_limit_up": 1768527021,
+            "limit_down_days": 0,
+            "limit_timeline": {
+                "items": [
+                    {
+                        "timestamp": 1768527021,
+                        "status": 1
+                    }
+                ]
+            },
+            "limit_up_days": 5,
+            "listed_date": 1664467200,
+            "m_days_n_boards_boards": 6,
+            "m_days_n_boards_days": 9,
+            "mtm": 0,
+            "nearly_new_acc_pcp": 0,
+            "nearly_new_break_days": 0,
+            "new_stock_acc_pcp": 1.7926150733,
+            "new_stock_break_limit_up": 0,
+            "new_stock_limit_up_days": 0,
+            "new_stock_limit_up_price_before_broken": 0,
+            "non_restricted_capital": 3923001760,
+            "price": 55.21,
+            "sell_lock_volume_ratio": 0,
+            "stock_chi_name": "博菲电气",
+            "stock_type": 0,
+            "surge_reason": {
+                "symbol": "001255.SZ",
+                "stock_reason": "公司绝缘材料已配套航天军工等高端装备、半导体封装等领域，还可以应用于核电发电机组上",
+                "related_plates": [
+                    {
+                        "plate_name": "航天",
+                        "plate_reason": "航天科技集团：2026年要全力突破重复使用火箭技术"
+                    }
+                ]
+            },
+            "symbol": "001255.SZ",
+            "total_capital": 4772914658.64,
+            "turnover_ratio": 0.0358428704,
+            "volume_bias_ratio": 0.4519154743,
+            "yesterday_break_limit_up_times": 2,
+            "yesterday_first_limit_up": 1768440744,
+            "yesterday_last_limit_up": 1768440870,
+            "yesterday_limit_down_days": 0,
+            "yesterday_limit_up_days": 4
+        }
+    ]
+}
+展示内容
+<div data-v-370cdab8="" data-v-76cc40d2="" class="table-container">
+    <div data-v-370cdab8="" class="fixed-head">
+        <table data-v-370cdab8="" class="table hit-pool__table fixed">
+            <colgroup data-v-370cdab8="">
+                <col data-v-370cdab8="" style="width: 4%;">
+                <col data-v-370cdab8="" style="width: 8%;">
+                <col data-v-370cdab8="" style="width: 25%;">
+                <col data-v-370cdab8="" style="width: 9%;">
+                <col data-v-370cdab8="" style="width: 9%;">
+                <col data-v-370cdab8="" style="width: 9%;">
+                <col data-v-370cdab8="" style="width: 9%;">
+                <col data-v-370cdab8="" style="width: 9%;">
+                <col data-v-370cdab8="" style="width: 9%;">
+                <col data-v-370cdab8="" style="width: 9%;">
+            </colgroup>
+            <thead data-v-370cdab8="" class="hit-pool__table-head">
+            <tr data-v-370cdab8="">
+                <th data-v-370cdab8=""><abbr data-v-370cdab8="" title="序号">序号</abbr></th> <!---->
+                <th data-v-370cdab8=""><abbr data-v-370cdab8="" title="股票名称">股票名称</abbr></th> <!---->
+                <th data-v-370cdab8=""><abbr data-v-370cdab8="" title="理由分析">理由分析</abbr></th> <!----><!---->
+                <th data-v-9f36643a="" data-v-370cdab8="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="最新价">最新价</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-370cdab8="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="涨跌幅">涨跌幅</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-370cdab8="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="换手率">换手率</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-370cdab8="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="流通市值">流通市值</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-370cdab8="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="总市值">总市值</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-370cdab8="" target="cur_price" class="stock-sort sort_target"><abbr
+                        data-v-9f36643a="" title="连板数">连板数</abbr> <span data-v-9f36643a="" class="icon"><i
+                        data-v-9f36643a="" class="iconfont icon-desc"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-370cdab8="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="几天几板">几天几板</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <div data-v-370cdab8="" class="ding-scroll-main">
+        <table data-v-370cdab8="" class="table hit-pool__table">
+            <colgroup data-v-370cdab8="">
+                <col data-v-370cdab8="" style="width: 4%;">
+                <col data-v-370cdab8="" style="width: 8%;">
+                <col data-v-370cdab8="" style="width: 25%;">
+                <col data-v-370cdab8="" style="width: 9%;">
+                <col data-v-370cdab8="" style="width: 9%;">
+                <col data-v-370cdab8="" style="width: 9%;">
+                <col data-v-370cdab8="" style="width: 9%;">
+                <col data-v-370cdab8="" style="width: 9%;">
+                <col data-v-370cdab8="" style="width: 9%;">
+                <col data-v-370cdab8="" style="width: 9%;">
+            </colgroup>
+            <thead data-v-370cdab8="" class="hit-pool__table-head">
+            <tr data-v-370cdab8="">
+                <th data-v-370cdab8=""><abbr data-v-370cdab8="" title="序号">序号</abbr></th> <!---->
+                <th data-v-370cdab8=""><abbr data-v-370cdab8="" title="股票名称">股票名称</abbr></th> <!---->
+                <th data-v-370cdab8=""><abbr data-v-370cdab8="" title="理由分析">理由分析</abbr></th> <!----><!---->
+                <th data-v-9f36643a="" data-v-370cdab8="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="最新价">最新价</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-370cdab8="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="涨跌幅">涨跌幅</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-370cdab8="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="换手率">换手率</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-370cdab8="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="流通市值">流通市值</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-370cdab8="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="总市值">总市值</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-370cdab8="" target="cur_price" class="stock-sort sort_target"><abbr
+                        data-v-9f36643a="" title="连板数">连板数</abbr> <span data-v-9f36643a="" class="icon"><i
+                        data-v-9f36643a="" class="iconfont icon-desc"></i></span></th><!---->
+                <th data-v-9f36643a="" data-v-370cdab8="" target="cur_price" class="stock-sort"><abbr data-v-9f36643a=""
+                                                                                                      title="几天几板">几天几板</abbr>
+                    <span data-v-9f36643a="" class="icon"><i data-v-9f36643a=""
+                                                             class="iconfont icon-default"></i></span></th>
+            </tr>
+            </thead>
+            <tbody data-v-370cdab8="" class="table hit-pool__table-body">
+            <tr data-v-370cdab8="">
+                <td data-v-370cdab8="" class="stock-index">60</td>
+                <td data-v-370cdab8="" target="001255.SZ" class="stock-title"><a data-v-370cdab8="" target="_blank"
+                                                                                 href="/stock/001255.SZ"><span
+                        data-v-370cdab8="" class="stock-title-name">博菲电气</span> <br data-v-370cdab8="">
+                    001255
+                </a></td>
+                <td data-v-370cdab8="" class="stock-reason locked"><span data-v-370cdab8="" class="line-clamp"><i
+                        data-v-370cdab8="" class="iconfont"></i> <p data-v-370cdab8="" class="stock-reason-login">请登录后查看</p></span>
+                </td>
+                <td data-v-370cdab8="" target="price" class=""><span data-v-370cdab8="" class="-market-color--rise">55.21</span>
+                </td>
+                <td data-v-370cdab8="" target="change_percent" class=""><span data-v-370cdab8=""
+                                                                              class="-market-color--rise">+10.00%</span>
+                </td>
+                <td data-v-370cdab8="" target="turnover_ratio" class="">
+                    3.58%
+                </td>
+                <td data-v-370cdab8="" target="non_restricted_capital" class="">
+                    39.2亿
+                </td>
+                <td data-v-370cdab8="" target="total_capital" class="">
+                    47.7亿
+                </td>
+                <td data-v-370cdab8="" target="limit_up_days" class="sort_target">
+                    5连板
+                </td>
+                <td data-v-370cdab8="" target="board_days" class="">
+                    9天6板
+                </td>
+            </tr>
+            </tbody>
+        </table> <!----></div>
+</div>

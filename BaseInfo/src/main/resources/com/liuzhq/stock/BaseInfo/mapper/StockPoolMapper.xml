@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liuzhq.stock.BaseInfo.mapper.StockPoolMapper">
+
+    <!-- 批量插入（忽略重复：股票代码+交易日期+股票池类型唯一） -->
+    <insert id="batchInsertIgnore">
+        INSERT IGNORE INTO t_stock_pool (
+        trade_date, stock_code, stock_name, stock_type, price, change_percent,
+        turnover_ratio, circulation_market_cap, total_market_cap, issue_price,
+        listed_date, pool_type, buy_lock_ratio, sell_lock_ratio, current_lock_amount,
+        max_lock_amount, limit_days, break_limit_times,
+        first_limit_up_time, last_limit_up_time, first_limit_down_time, last_limit_down_time,
+        yesterday_break_limit_up_times, yesterday_first_limit_up_time,
+        yesterday_last_limit_up_time, last_break_limit_up_time, m_days_n_boards,
+        stock_reason, related_plates, create_time, update_time
+        ) VALUES
+        <foreach collection="list" item="item" separator=",">
+            (
+            #{item.tradeDate}, #{item.stockCode}, #{item.stockName}, #{item.stockType}, #{item.price}, #{item.changePercent},
+            #{item.turnoverRatio}, #{item.circulationMarketCap}, #{item.totalMarketCap}, #{item.issuePrice},
+            #{item.listedDate}, #{item.poolType}, #{item.buyLockRatio}, #{item.sellLockRatio}, #{item.currentLockAmount},
+            #{item.maxLockAmount}, #{item.limitDays}, #{item.breakLimitTimes},
+            #{item.firstLimitUpTime}, #{item.lastLimitUpTime}, #{item.firstLimitDownTime}, #{item.lastLimitDownTime},
+            #{item.yesterdayBreakLimitUpTimes}, #{item.yesterdayFirstLimitUpTime},
+            #{item.yesterdayLastLimitUpTime}, #{item.lastBreakLimitUpTime}, #{item.mDaysNBoards},
+            #{item.stockReason}, #{item.relatedPlates}, NOW(), NOW()
+            )
+        </foreach>
+    </insert>
+
+    <!-- 根据交易日期和股票池类型查询 -->
+    <select id="selectByTradeDateAndPoolType" resultType="com.liuzhq.stock.BaseInfo.dto.StockPoolDto">
+        SELECT t1.*
+        FROM t_stock_pool t1
+        JOIN (
+            SELECT trade_date
+            FROM t_stock_pool
+            WHERE trade_date = DATE(#{tradeDate}) and pool_type = #{poolType}
+            ORDER BY trade_date DESC
+            LIMIT 1
+        ) t2 ON t1.trade_date = t2.trade_date
+             where pool_type = #{poolType}
+                    <if test="notShowSt != null and notShowSt == 1">
+                        and not stock_name like '%ST%'
+                    </if>
+        order by limit_days desc, change_percent desc, price desc
+    </select>
+
+</mapper>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.liuzhq.stock.BaseInfo.mapper.DeliveryOrderMapper">
+
+    <select id="queryDeliveryOrder"
+            resultType="com.liuzhq.stock.BaseInfo.dto.DeliveryOrderDto">
+        SELECT * FROM t_delivery_order
+        WHERE 1=1
+        <if test="brokerCode != null and brokerCode != ''">
+            AND broker_code = #{brokerCode}
+        </if>
+        <if test="accountNo != null and accountNo != ''">
+            AND account_no = #{accountNo}
+        </if>
+        <if test="securityCode != null and securityCode != ''">
+            AND security_code = #{securityCode}
+        </if>
+        <if test="startTime != null and startTime != ''">
+            AND DATE(trade_time) >= #{startTime}
+        </if>
+        <if test="endTime != null and endTime != ''">
+            AND #{endTime} >= DATE(trade_time)
+        </if>
+        ORDER BY trade_time DESC
+    </select>
+
+</mapper>

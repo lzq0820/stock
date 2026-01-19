@@ -1,0 +1,221 @@
+package com.liuzhq.stock.BaseInfo.entity;
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+/**
+ * 股票池数据实体
+ */
+@Data
+@TableName("t_stock_pool")
+public class StockPool {
+    /** 主键ID（自增） */
+    @TableId(type = IdType.AUTO)
+    private Long id;
+
+    /** 交易日期（yyyy-MM-dd） */
+    private LocalDate tradeDate;
+
+    /** 股票代码（如603986.SS） */
+    private String stockCode;
+
+    /** 股票名称 */
+    private String stockName;
+
+    /** 股票类型 */
+    private Integer stockType;
+
+    /** 最新价（元） */
+    private BigDecimal price;
+
+    /** 涨跌幅（%） */
+    private BigDecimal changePercent;
+
+    /** 换手率（%） */
+    private BigDecimal turnoverRatio;
+
+    /** 流通市值（亿元） */
+    private BigDecimal circulationMarketCap;
+
+    /** 总市值（亿元） */
+    private BigDecimal totalMarketCap;
+
+    /** 发行价（元） */
+    private BigDecimal issuePrice;
+
+    /** 上市日期 */
+    private LocalDateTime listedDate;
+
+    /** 股票池类型（zt=涨停池, dt=跌停池, yesterday_zt=昨日涨停, broken_zt=炸板池, super_stock=强势股池） */
+    private String poolType;
+
+    /** 买盘封单比（%） */
+    private BigDecimal buyLockRatio;
+
+    /** 卖盘封单比（%） */
+    private BigDecimal sellLockRatio;
+
+    /** 当前封单金额（元） */
+    private BigDecimal currentLockAmount;
+
+    /** 最高封单金额（元） */
+    private BigDecimal maxLockAmount;
+
+    /** 连板数（涨停池/强势股池） */
+    private Integer limitUpDays;
+
+    /** 连跌停数（跌停池） */
+    private Integer limitDownDays;
+
+    /** 开板次数（涨停池/跌停池） */
+    private Integer breakLimitTimes;
+
+    /** 首次封板时间（涨停池/炸板池/强势股池） */
+    private LocalDateTime firstLimitUpTime;
+
+    /** 最后封板时间（涨停池/强势股池） */
+    private LocalDateTime lastLimitUpTime;
+
+    /** 首次封跌停时间（跌停池） */
+    private LocalDateTime firstLimitDownTime;
+
+    /** 最后封跌停时间（跌停池） */
+    private LocalDateTime lastLimitDownTime;
+
+    /** 昨日连板数（昨日涨停池） */
+    private Integer yesterdayLimitUpDays;
+
+    /** 昨日开板次数（昨日涨停池） */
+    private Integer yesterdayBreakLimitUpTimes;
+
+    /** 昨日首次封板时间（昨日涨停池） */
+    private LocalDateTime yesterdayFirstLimitUpTime;
+
+    /** 昨日最后封板时间（昨日涨停池） */
+    private LocalDateTime yesterdayLastLimitUpTime;
+
+    /** 最后炸板时间（炸板池） */
+    private LocalDateTime lastBreakLimitUpTime;
+
+    /** 几天几板（强势股池） */
+    private String mDaysNBoards;
+
+    /** 股票上涨/下跌原因 */
+    private String stockReason;
+
+    /** 相关板块（JSON字符串） */
+    private String relatedPlates;
+
+    /** 创建时间 */
+    private LocalDateTime createTime;
+
+    /** 更新时间 */
+    private LocalDateTime updateTime;
+}
+
+GET http://localhost:19997/baseInfo/baseInfo/stockPool/query?tradeDate=2026-01-16&poolType=zt
+{
+    "msg": "查询成功",
+    "code": 200,
+    "data": [
+        {
+            "id": 42,
+            "tradeDate": "2026-01-16",
+            "stockCode": "603665.SS",
+            "stockName": "康隆达",
+            "stockType": 0,
+            "price": 36.03,
+            "changePercent": 10.02,
+            "turnoverRatio": 4.33,
+            "circulationMarketCap": 57.71,
+            "totalMarketCap": 58.05,
+            "issuePrice": 21.40,
+            "listedDate": "2017-03-12T16:00:00",
+            "poolType": "zt",
+            "buyLockRatio": 1.7114,
+            "sellLockRatio": 0.0000,
+            "currentLockAmount": 98760502.21,
+            "maxLockAmount": 98760502.21,
+            "limitUpDays": 1,
+            "limitDownDays": null,
+            "breakLimitTimes": 0,
+            "firstLimitUpTime": "2026-01-16T05:00:30",
+            "lastLimitUpTime": "2026-01-16T05:00:30",
+            "firstLimitDownTime": null,
+            "lastLimitDownTime": null,
+            "yesterdayLimitUpDays": null,
+            "yesterdayBreakLimitUpTimes": null,
+            "yesterdayFirstLimitUpTime": null,
+            "yesterdayLastLimitUpTime": null,
+            "lastBreakLimitUpTime": null,
+            "stockReason": "消息称特斯拉灵巧手驱控方案要用到腱绳，腱绳材料主要以超高分子量聚乙烯与PBO纤维为主；公司超高分子聚乙烯具备1000吨产能",
+            "relatedPlates": "[{\"plate_name\": \"大消费\", \"plate_reason\": \"谷歌与沃尔玛合作AI购物\"}, {\"plate_name\": \"机器人\", \"plate_reason\": \"OpenAI为机器人和AI设备计划寻找供应商\"}]",
+            "createTime": "2026-01-16T22:06:07",
+            "updateTime": "2026-01-16T22:06:07",
+            "mdaysNBoards": null
+        },
+        {
+            "id": 50,
+            "tradeDate": "2026-01-16",
+            "stockCode": "301235.SZ",
+            "stockName": "华康洁净",
+            "stockType": 4,
+            "price": 48.22,
+            "changePercent": 20.01,
+            "turnoverRatio": 21.50,
+            "circulationMarketCap": 35.08,
+            "totalMarketCap": 51.97,
+            "issuePrice": 39.30,
+            "listedDate": "2022-01-27T16:00:00",
+            "poolType": "zt",
+            "buyLockRatio": 2.3157,
+            "sellLockRatio": 0.0000,
+            "currentLockAmount": 81227149.24,
+            "maxLockAmount": 81227149.24,
+            "limitUpDays": 1,
+            "limitDownDays": null,
+            "breakLimitTimes": 0,
+            "firstLimitUpTime": "2026-01-16T05:14:42",
+            "lastLimitUpTime": "2026-01-16T05:14:42",
+            "firstLimitDownTime": null,
+            "lastLimitDownTime": null,
+            "yesterdayLimitUpDays": null,
+            "yesterdayBreakLimitUpTimes": null,
+            "yesterdayFirstLimitUpTime": null,
+            "yesterdayLastLimitUpTime": null,
+            "lastBreakLimitUpTime": null,
+            "stockReason": "关于半导体业务，公司表示“在洁净技术领域已具备成熟的技术团队、经过项目验证的高效交付体系以及稳定的供应链保障，能够确保项目顺利落地并达到相应的洁净标准”",
+            "relatedPlates": "[{\"plate_name\": \"国产芯片\", \"plate_reason\": \"台积电业绩超预期；海外存储龙头连创新高\"}]",
+            "createTime": "2026-01-16T22:06:07",
+            "updateTime": "2026-01-16T22:06:07",
+            "mdaysNBoards": null
+        }
+    ],
+    "count": 67
+}
+
+帮我生成zt=涨停连板池, dt=跌停连板池, yesterday_zt=昨日涨停池, broken_zt=炸板池, super_stock=强势股池这几种类型的股票池雁阵梯度图，使用vue3+node v25.2.1+javascript+html+css技术栈
+1.涨停池和跌停池要生成雁阵梯度图，涨停池要基于昨日涨停生成雁阵梯度图，
+如果昨日涨停但今日未涨停则标记失败，
+如果昨日涨停今日也涨停则标记成功，
+如果昨日涨停但今日未涨停且炸板则标记炸板，标记的颜色根据成功炸板失败递减；
+2.涨停雁阵梯度图在每个梯度的最左侧标记几连板+晋级几率（显示内容如：3 连板\n1进2：成功数/总数=几率百分比）、股票列表，每个梯度划分组，梯度背景色渐变，即表格标题：连板、日期+xx(涨停连板)池
+如果某个梯度的股票过多就要自动换行显示，每行的行间距要保证在0.2厘米，每个股票的间距保证在0.2厘米；每个股票要有背景色，每个梯度的股票按照今日涨停的涨幅降序排序，
+还要在每个股票的框里显示上涨/下跌原因，原因默认显示14个字，超出14个字则显示三个点，鼠标放在三个点上显示完整原因，
+股票和当前价格、涨幅、几天几板放在一行显示，原因放在第二行显示，
+股票所在的框行列排列要对齐，默认股票名长度为6个；
+3.雁阵梯度图支持列表切换，分为涨停连板池（昨日涨停池+涨停连板池合并显示，基础数据以昨日涨停池为列表，在股票的备注显示几天几板）、跌停池、昨日涨停池、强势股池；
+4.雁阵梯度图宽度显示为屏幕宽度的70%，居于屏幕左侧，右侧我还有其他用处的
+5.支持日期选择，如果可以提供一个日期选择组件更好
+6.提供一个一键复制股票名的小按钮
+7.提供一个搜索框，模糊匹配股票名、上涨/下跌原因，如果模糊匹配中了就高亮显示字体和稍微加深股票框的背景色
+8.点击股票的上涨/下跌原因，高亮显示字体和稍微加深股票框的背景色，
+还要匹配其他股票和这个股票存在模糊匹配中的上涨/下跌原因，
+如果匹配中了，就需要高亮显示匹配中上涨/下跌原因的其他股票股票名和稍微加深股票框的背景色
+9.不要放到一个组件，把组件拆分，降低耦合，把组件拆分，并且列出文件目录
+10.把package.json、vite.config.js等这些配置也列出来，还要做代理的，例如以/baseInfo开头的接口转发到http://localhost:19997，还要解决跨域

@@ -1,0 +1,33 @@
+# 应用服务 WEB 访问端口
+server:
+  port: 8080
+
+# Spring Cloud Alibaba Nacos 服务注册与配置中心配置
+spring:
+  application:
+    name: NACOSCLIENT
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.80.135:8848
+        # 注册到nacos的服务名
+        service: NACOSCLIENT
+        # 添加连接配置
+        namespace: public
+        group: DEFAULT_GROUP
+        # 重要：增加超时时间
+        watch-delay: 30000
+        # 如果Nacos开启了认证
+        username: nacos
+        password: nacos
+      # 添加全局配置
+      config:
+        server-addr: 192.168.80.135:8848
+        # 连接超时配置（毫秒）
+        timeout: 10000
+        # 重试配置
+        max-retry: 5
+        retry-time: 2000
+      username: nacos
+      password: nacos
+

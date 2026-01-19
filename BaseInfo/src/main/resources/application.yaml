@@ -1,0 +1,48 @@
+# 应用服务 WEB 访问端口
+server:
+  port: 19997
+  servlet:
+    context-path: /baseInfo
+
+spring:
+  application:
+    name: BASEINFO
+
+  # 数据源配置（改为通用格式，兼容所有SpringBoot版本）
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://mysql5.sqlpub.com:3310/liuzhq?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
+    username: liuzhq
+    password: YYB0ygRUqS42S9Ex
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 300000
+      connection-timeout: 20000
+      max-lifetime: 1800000
+      connection-test-query: SELECT 1
+      pool-name: BaseInfoHikariCP
+  # MyBatis配置
+  mybatis-plus:
+    mapper-locations: classpath:mapper/**/*.xml
+    type-aliases-package: com.liuzhq.stock.BaseInfo.entity
+    configuration:
+      map-underscore-to-camel-case: true
+      log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# 日志配置
+logging:
+  level:
+    com.liuzhq.stock.BaseInfo.mapper: debug
+    com.zaxxer.hikari: info
+
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+
+python:
+  api:
+    base-url: http://localhost:8000/api  # Python服务的地址和端口

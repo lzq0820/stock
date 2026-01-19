@@ -1,0 +1,1831 @@
+Request URL
+https://flash-api.xuangubao.com.cn/api/event/history?timestamp=1768546569&count=30&types=10001,10005,10003,10007,10002,10006,10004,10008,10012,10014,10009,10010,11000,11001
+Request Method
+GET
+{
+    "code": 20000,
+    "message": "OK",
+    "data": [
+        {
+            "id": 8507608,
+            "target": "603986.SS",
+            "event_type": 10001,
+            "event_timestamp": 1768546569,
+            "stock_abnormal_event_data": {
+                "symbol": "603986.SS",
+                "name": "兆易创新",
+                "mtm": 0.0037938439513243,
+                "pcp": 0.10001568873548772,
+                "price": 280.46,
+                "related_plates": [
+                    {
+                        "plate_id": 20668110,
+                        "plate_name": "物联网",
+                        "plate_pcp": 0.00430980725892857
+                    },
+                    {
+                        "plate_id": 93250001,
+                        "plate_name": "回购增持再贷款",
+                        "plate_pcp": 0.01166746499130435
+                    },
+                    {
+                        "plate_id": 5433758,
+                        "plate_name": "业绩增长",
+                        "plate_pcp": 0.005285579848529413
+                    },
+                    {
+                        "plate_id": 16844702,
+                        "plate_name": "半导体",
+                        "plate_pcp": 0.03777959916411291
+                    },
+                    {
+                        "plate_id": 39480658,
+                        "plate_name": "汽车芯片",
+                        "plate_pcp": 0.030909323526153835
+                    },
+                    {
+                        "plate_id": 15621326,
+                        "plate_name": "超高清视频",
+                        "plate_pcp": -0.009145701911827958
+                    },
+                    {
+                        "plate_id": 54594386,
+                        "plate_name": "无线耳机",
+                        "plate_pcp": 0.014466660520652177
+                    },
+                    {
+                        "plate_id": 21095762,
+                        "plate_name": "指纹识别",
+                        "plate_pcp": 0.023388693233333337
+                    },
+                    {
+                        "plate_id": 13011026,
+                        "plate_name": "高价股",
+                        "plate_pcp": 0.021862751606034483
+                    },
+                    {
+                        "plate_id": 61549817,
+                        "plate_name": "传感器",
+                        "plate_pcp": 0.02123803052553192
+                    },
+                    {
+                        "plate_id": 54463873,
+                        "plate_name": "闪存",
+                        "plate_pcp": 0.04241153820909091
+                    },
+                    {
+                        "plate_id": 4670889,
+                        "plate_name": "DRAM（内存）",
+                        "plate_pcp": 0.06721665940869566
+                    },
+                    {
+                        "plate_id": 31765737,
+                        "plate_name": "国产芯片",
+                        "plate_pcp": 0.02752879205
+                    },
+                    {
+                        "plate_id": 17490281,
+                        "plate_name": "人工智能",
+                        "plate_pcp": -0.015897260341706153
+                    }
+                ]
+            },
+            "plate_abnormal_event_data": {},
+            "good_or_bad": 1
+        },
+        {
+            "id": 8507607,
+            "target": "801",
+            "event_type": 11000,
+            "event_timestamp": 1768546568,
+            "stock_abnormal_event_data": {},
+            "plate_abnormal_event_data": {
+                "plate_id": 89343809,
+                "plate_name": "高带宽存储器HBM",
+                "pcp": 0.0457146576107143,
+                "related_stocks": [
+                    {
+                        "symbol": "002409.SZ",
+                        "name": "雅克科技",
+                        "mtm": 0.03204574881312,
+                        "pcp": 0.0320457488131205
+                    },
+                    {
+                        "symbol": "002436.SZ",
+                        "name": "兴森科技",
+                        "mtm": 0.025494505494505,
+                        "pcp": 0.025494505494505493
+                    },
+                    {
+                        "symbol": "688361.SS",
+                        "name": "中科飞测",
+                        "mtm": 0.020505711964055,
+                        "pcp": 0.08386638237384503
+                    }
+                ]
+            },
+            "good_or_bad": 1
+        },
+        {
+            "id": 8507606,
+            "target": "300669.SZ",
+            "event_type": 10005,
+            "event_timestamp": 1768546566,
+            "stock_abnormal_event_data": {
+                "symbol": "300669.SZ",
+                "name": "沪宁股份",
+                "mtm": -0.0019569471624266,
+                "pcp": 0.197651663405088,
+                "price": 30.6,
+                "related_plates": [
+                    {
+                        "plate_id": 15742577,
+                        "plate_name": "电梯",
+                        "plate_pcp": 0.014338449482352944
+                    }
+                ]
+            },
+            "plate_abnormal_event_data": {},
+            "good_or_bad": 1
+        },
+        {
+            "id": 8507605,
+            "target": "603058.SS",
+            "event_type": 10007,
+            "event_timestamp": 1768546565,
+            "stock_abnormal_event_data": {
+                "symbol": "603058.SS",
+                "name": "永吉股份",
+                "pcp": 0.10000000000000007,
+                "price": 10.56,
+                "related_plates": [
+                    {
+                        "plate_id": 14303017,
+                        "plate_name": "工业大麻",
+                        "plate_pcp": -0.002461596681250001
+                    },
+                    {
+                        "plate_id": 18811806,
+                        "plate_name": "包装印刷",
+                        "plate_pcp": 0.0005362271133333335
+                    },
+                    {
+                        "plate_id": 52532754,
+                        "plate_name": "烟草",
+                        "plate_pcp": 0.0027816473074074085
+                    }
+                ]
+            },
+            "plate_abnormal_event_data": {},
+            "good_or_bad": 2
+        },
+        {
+            "id": 8507604,
+            "target": "30",
+            "event_type": 11001,
+            "event_timestamp": 1768546560,
+            "stock_abnormal_event_data": {},
+            "plate_abnormal_event_data": {
+                "plate_id": 16813522,
+                "plate_name": "创新药",
+                "pcp": -0.011123008810734466,
+                "related_stocks": [
+                    {
+                        "symbol": "688319.SS",
+                        "name": "欧林生物",
+                        "mtm": -0.035907335907336,
+                        "pcp": -0.14457005823912306
+                    },
+                    {
+                        "symbol": "301333.SZ",
+                        "name": "诺思格",
+                        "mtm": -0.017570350034317,
+                        "pcp": -0.058165548098433995
+                    },
+                    {
+                        "symbol": "301257.SZ",
+                        "name": "普蕊斯",
+                        "mtm": -0.023781561949501,
+                        "pcp": -0.04714142427281853
+                    }
+                ]
+            },
+            "good_or_bad": 2
+        },
+        {
+            "id": 8507603,
+            "target": "688319.SS",
+            "event_type": 10010,
+            "event_timestamp": 1768546560,
+            "stock_abnormal_event_data": {
+                "symbol": "688319.SS",
+                "name": "欧林生物",
+                "mtm": -0.035907335907336,
+                "pcp": -0.14457005823912306,
+                "price": 24.97,
+                "related_plates": [
+                    {
+                        "plate_id": 16813522,
+                        "plate_name": "创新药",
+                        "plate_pcp": -0.011123008810734466
+                    },
+                    {
+                        "plate_id": 25638417,
+                        "plate_name": "医药",
+                        "plate_pcp": -0.012036081957647065
+                    },
+                    {
+                        "plate_id": 26021321,
+                        "plate_name": "疫苗",
+                        "plate_pcp": -0.018153799454166664
+                    }
+                ]
+            },
+            "plate_abnormal_event_data": {},
+            "good_or_bad": 2
+        },
+        {
+            "id": 8507602,
+            "target": "300669.SZ",
+            "event_type": 10005,
+            "event_timestamp": 1768546548,
+            "stock_abnormal_event_data": {
+                "symbol": "300669.SZ",
+                "name": "沪宁股份",
+                "mtm": -0.005218525766471,
+                "pcp": 0.19373776908023488,
+                "price": 30.5,
+                "related_plates": [
+                    {
+                        "plate_id": 15742577,
+                        "plate_name": "电梯",
+                        "plate_pcp": 0.014338449482352944
+                    }
+                ]
+            },
+            "plate_abnormal_event_data": {},
+            "good_or_bad": 1
+        },
+        {
+            "id": 8507601,
+            "target": "709",
+            "event_type": 11000,
+            "event_timestamp": 1768546547,
+            "stock_abnormal_event_data": {},
+            "plate_abnormal_event_data": {
+                "plate_id": 40091417,
+                "plate_name": "大农业",
+                "pcp": -0.002314683905825243,
+                "related_stocks": [
+                    {
+                        "symbol": "600841.SS",
+                        "name": "动力新科",
+                        "mtm": 0.10032362459547,
+                        "pcp": 0.10032362459546929
+                    },
+                    {
+                        "symbol": "300511.SZ",
+                        "name": "雪榕生物",
+                        "mtm": -0.01963746223565,
+                        "pcp": 0.04846526655896599
+                    },
+                    {
+                        "symbol": "002448.SZ",
+                        "name": "中原内配",
+                        "mtm": 0.059907834101383,
+                        "pcp": 0.05990783410138256
+                    }
+                ]
+            },
+            "good_or_bad": 1
+        },
+        {
+            "id": 8507600,
+            "target": "300669.SZ",
+            "event_type": 10003,
+            "event_timestamp": 1768546545,
+            "stock_abnormal_event_data": {
+                "symbol": "300669.SZ",
+                "name": "沪宁股份",
+                "pcp": 0.19999999999999996,
+                "price": 30.66,
+                "related_plates": [
+                    {
+                        "plate_id": 15742577,
+                        "plate_name": "电梯",
+                        "plate_pcp": 0.014338449482352944
+                    }
+                ]
+            },
+            "plate_abnormal_event_data": {},
+            "good_or_bad": 2
+        },
+        {
+            "id": 8507599,
+            "target": "000078.SZ",
+            "event_type": 10008,
+            "event_timestamp": 1768546545,
+            "stock_abnormal_event_data": {
+                "symbol": "000078.SZ",
+                "name": "海王生物",
+                "pcp": -0.10096153846153844,
+                "price": 3.74,
+                "related_plates": [
+                    {
+                        "plate_id": 25638417,
+                        "plate_name": "医药",
+                        "plate_pcp": -0.012036081957647065
+                    },
+                    {
+                        "plate_id": 16806857,
+                        "plate_name": "中药",
+                        "plate_pcp": -0.0134815486359375
+                    },
+                    {
+                        "plate_id": 29982649,
+                        "plate_name": "流感",
+                        "plate_pcp": -0.007148031689090909
+                    },
+                    {
+                        "plate_id": 61977294,
+                        "plate_name": "新冠病毒防治",
+                        "plate_pcp": -0.009836961488738735
+                    },
+                    {
+                        "plate_id": 16813522,
+                        "plate_name": "创新药",
+                        "plate_pcp": -0.011123008810734466
+                    },
+                    {
+                        "plate_id": 96196466,
+                        "plate_name": "海洋经济",
+                        "plate_pcp": -0.007655331423300971
+                    },
+                    {
+                        "plate_id": 18005049,
+                        "plate_name": "医药商业",
+                        "plate_pcp": -0.021790780444186045
+                    }
+                ]
+            },
+            "plate_abnormal_event_data": {},
+            "good_or_bad": 1
+        },
+        {
+            "id": 8507598,
+            "target": "002112.SZ",
+            "event_type": 10010,
+            "event_timestamp": 1768546536,
+            "stock_abnormal_event_data": {
+                "symbol": "002112.SZ",
+                "name": "三变科技",
+                "mtm": -0.030243902439024,
+                "pcp": -0.06004728132387704,
+                "price": 19.88,
+                "related_plates": [
+                    {
+                        "plate_id": 27631737,
+                        "plate_name": "储能",
+                        "plate_pcp": 0.005627355043277309
+                    },
+                    {
+                        "plate_id": 18443089,
+                        "plate_name": "浙江国企改革",
+                        "plate_pcp": -0.009045835574242425
+                    },
+                    {
+                        "plate_id": 53171153,
+                        "plate_name": "国企改革",
+                        "plate_pcp": -0.005904584899783784
+                    },
+                    {
+                        "plate_id": 17249694,
+                        "plate_name": "举牌",
+                        "plate_pcp": -0.006748365732142858
+                    },
+                    {
+                        "plate_id": 16116825,
+                        "plate_name": "泛在电力物联网",
+                        "plate_pcp": 0.012484744712056735
+                    },
+                    {
+                        "plate_id": 87056697,
+                        "plate_name": "智能电网",
+                        "plate_pcp": 0.01148141552392345
+                    },
+                    {
+                        "plate_id": 21825682,
+                        "plate_name": "光伏",
+                        "plate_pcp": 0.0094518718112766
+                    }
+                ]
+            },
+            "plate_abnormal_event_data": {},
+            "good_or_bad": 2
+        },
+        {
+            "id": 8507597,
+            "target": "002799.SZ",
+            "event_type": 10004,
+            "event_timestamp": 1768546536,
+            "stock_abnormal_event_data": {
+                "symbol": "002799.SZ",
+                "name": "环球印务",
+                "pcp": -0.09999999999999998,
+                "price": 8.55,
+                "related_plates": [
+                    {
+                        "plate_id": 53171153,
+                        "plate_name": "国企改革",
+                        "plate_pcp": -0.005904584899783784
+                    },
+                    {
+                        "plate_id": 5065425,
+                        "plate_name": "字节跳动概念股",
+                        "plate_pcp": -0.03540847421250001
+                    },
+                    {
+                        "plate_id": 17277266,
+                        "plate_name": "造纸",
+                        "plate_pcp": -0.0034761416891891895
+                    },
+                    {
+                        "plate_id": 18811806,
+                        "plate_name": "包装印刷",
+                        "plate_pcp": 0.0005362271133333335
+                    },
+                    {
+                        "plate_id": 30605897,
+                        "plate_name": "数字经济",
+                        "plate_pcp": -0.023092761138679245
+                    },
+                    {
+                        "plate_id": 97015161,
+                        "plate_name": "区块链",
+                        "plate_pcp": -0.027457292358706475
+                    },
+                    {
+                        "plate_id": 37112745,
+                        "plate_name": "快手概念股",
+                        "plate_pcp": -0.045909537551282055
+                    },
+                    {
+                        "plate_id": 99510478,
+                        "plate_name": "陕西国企改革",
+                        "plate_pcp": -0.003191437956666668
+                    },
+                    {
+                        "plate_id": 33246089,
+                        "plate_name": "阿里巴巴概念股",
+                        "plate_pcp": -0.027677937424401892
+                    }
+                ]
+            },
+            "plate_abnormal_event_data": {},
+            "good_or_bad": 1
+        },
+        {
+            "id": 8507596,
+            "target": "603011.SS",
+            "event_type": 10006,
+            "event_timestamp": 1768546534,
+            "stock_abnormal_event_data": {
+                "symbol": "603011.SS",
+                "name": "合锻智能",
+                "mtm": 0.0020826102047900997,
+                "pcp": -0.0980943455170259,
+                "price": 28.87,
+                "related_plates": [
+                    {
+                        "plate_id": 40091417,
+                        "plate_name": "大农业",
+                        "plate_pcp": -0.002314683905825243
+                    },
+                    {
+                        "plate_id": 16845721,
+                        "plate_name": "特斯拉",
+                        "plate_pcp": 0.01585929487610062
+                    },
+                    {
+                        "plate_id": 29751954,
+                        "plate_name": "智能制造",
+                        "plate_pcp": 0.006967417029550325
+                    },
+                    {
+                        "plate_id": 42683577,
+                        "plate_name": "工业母机",
+                        "plate_pcp": 0.032373118061818196
+                    },
+                    {
+                        "plate_id": 27772369,
+                        "plate_name": "机器视觉",
+                        "plate_pcp": 0.006837141328409089
+                    },
+                    {
+                        "plate_id": 89887390,
+                        "plate_name": "核聚变",
+                        "plate_pcp": -0.00135423088064516
+                    },
+                    {
+                        "plate_id": 17640222,
+                        "plate_name": "农机",
+                        "plate_pcp": 0.009958473954285715
+                    }
+                ]
+            },
+            "plate_abnormal_event_data": {},
+            "good_or_bad": 2
+        },
+        {
+            "id": 8507595,
+            "target": "002799.SZ",
+            "event_type": 10002,
+            "event_timestamp": 1768546530,
+            "stock_abnormal_event_data": {
+                "symbol": "002799.SZ",
+                "name": "环球印务",
+                "pcp": -0.09999999999999998,
+                "price": 8.55,
+                "related_plates": [
+                    {
+                        "plate_id": 30605897,
+                        "plate_name": "数字经济",
+                        "plate_pcp": -0.023092761138679245
+                    },
+                    {
+                        "plate_id": 37112745,
+                        "plate_name": "快手概念股",
+                        "plate_pcp": -0.045909537551282055
+                    },
+                    {
+                        "plate_id": 99510478,
+                        "plate_name": "陕西国企改革",
+                        "plate_pcp": -0.003191437956666668
+                    },
+                    {
+                        "plate_id": 53171153,
+                        "plate_name": "国企改革",
+                        "plate_pcp": -0.005904584899783784
+                    },
+                    {
+                        "plate_id": 5065425,
+                        "plate_name": "字节跳动概念股",
+                        "plate_pcp": -0.03540847421250001
+                    },
+                    {
+                        "plate_id": 17277266,
+                        "plate_name": "造纸",
+                        "plate_pcp": -0.0034761416891891895
+                    },
+                    {
+                        "plate_id": 97015161,
+                        "plate_name": "区块链",
+                        "plate_pcp": -0.027457292358706475
+                    },
+                    {
+                        "plate_id": 33246089,
+                        "plate_name": "阿里巴巴概念股",
+                        "plate_pcp": -0.027677937424401892
+                    },
+                    {
+                        "plate_id": 18811806,
+                        "plate_name": "包装印刷",
+                        "plate_pcp": 0.0005362271133333335
+                    }
+                ]
+            },
+            "plate_abnormal_event_data": {},
+            "good_or_bad": 2
+        },
+        {
+            "id": 8507594,
+            "target": "002799.SZ",
+            "event_type": 10004,
+            "event_timestamp": 1768546521,
+            "stock_abnormal_event_data": {
+                "symbol": "002799.SZ",
+                "name": "环球印务",
+                "mtm": 0.0011695906432748,
+                "pcp": -0.09894736842105256,
+                "price": 8.56,
+                "related_plates": [
+                    {
+                        "plate_id": 33246089,
+                        "plate_name": "阿里巴巴概念股",
+                        "plate_pcp": -0.027677937424401892
+                    },
+                    {
+                        "plate_id": 5065425,
+                        "plate_name": "字节跳动概念股",
+                        "plate_pcp": -0.03540847421250001
+                    },
+                    {
+                        "plate_id": 30605897,
+                        "plate_name": "数字经济",
+                        "plate_pcp": -0.023092761138679245
+                    },
+                    {
+                        "plate_id": 17277266,
+                        "plate_name": "造纸",
+                        "plate_pcp": -0.0034761416891891895
+                    },
+                    {
+                        "plate_id": 18811806,
+                        "plate_name": "包装印刷",
+                        "plate_pcp": 0.0005362271133333335
+                    },
+                    {
+                        "plate_id": 97015161,
+                        "plate_name": "区块链",
+                        "plate_pcp": -0.027457292358706475
+                    },
+                    {
+                        "plate_id": 99510478,
+                        "plate_name": "陕西国企改革",
+                        "plate_pcp": -0.003191437956666668
+                    },
+                    {
+                        "plate_id": 37112745,
+                        "plate_name": "快手概念股",
+                        "plate_pcp": -0.045909537551282055
+                    },
+                    {
+                        "plate_id": 53171153,
+                        "plate_name": "国企改革",
+                        "plate_pcp": -0.005904584899783784
+                    }
+                ]
+            },
+            "plate_abnormal_event_data": {},
+            "good_or_bad": 1
+        },
+        {
+            "id": 8507593,
+            "target": "600667.SS",
+            "event_type": 10003,
+            "event_timestamp": 1768546520,
+            "stock_abnormal_event_data": {
+                "symbol": "600667.SS",
+                "name": "太极实业",
+                "pcp": 0.10000000000000007,
+                "price": 9.46,
+                "related_plates": [
+                    {
+                        "plate_id": 4670889,
+                        "plate_name": "DRAM（内存）",
+                        "plate_pcp": 0.06721665940869566
+                    },
+                    {
+                        "plate_id": 53171153,
+                        "plate_name": "国企改革",
+                        "plate_pcp": -0.005904584899783784
+                    },
+                    {
+                        "plate_id": 31765737,
+                        "plate_name": "国产芯片",
+                        "plate_pcp": 0.02752879205
+                    },
+                    {
+                        "plate_id": 25195410,
+                        "plate_name": "江苏国企改革",
+                        "plate_pcp": 0.0011267255718750006
+                    },
+                    {
+                        "plate_id": 21825682,
+                        "plate_name": "光伏",
+                        "plate_pcp": 0.0094518718112766
+                    },
+                    {
+                        "plate_id": 16844702,
+                        "plate_name": "半导体",
+                        "plate_pcp": 0.03777959916411291
+                    },
+                    {
+                        "plate_id": 13843150,
+                        "plate_name": "长三角一体化",
+                        "plate_pcp": -0.00543446588037383
+                    },
+                    {
+                        "plate_id": 40280753,
+                        "plate_name": "BIPV概念",
+                        "plate_pcp": 0.0006557917781249995
+                    },
+                    {
+                        "plate_id": 65767826,
+                        "plate_name": "中芯国际概念股",
+                        "plate_pcp": 0.03520834012941177
+                    }
+                ]
+            },
+            "plate_abnormal_event_data": {},
+            "good_or_bad": 2
+        },
+        {
+            "id": 8507592,
+            "target": "603822.SS",
+            "event_type": 10004,
+            "event_timestamp": 1768546518,
+            "stock_abnormal_event_data": {
+                "symbol": "603822.SS",
+                "name": "ST嘉澳",
+                "pcp": -0.05003354739768041,
+                "price": 99.11,
+                "related_plates": [
+                    {
+                        "plate_id": 13011026,
+                        "plate_name": "高价股",
+                        "plate_pcp": 0.021542824727586216
+                    },
+                    {
+                        "plate_id": 24898553,
+                        "plate_name": "ST股",
+                        "plate_pcp": -0.0020998400633136104
+                    },
+                    {
+                        "plate_id": 61977294,
+                        "plate_name": "新冠病毒防治",
+                        "plate_pcp": -0.009981852661261262
+                    },
+                    {
+                        "plate_id": 60429714,
+                        "plate_name": "可降解塑料",
+                        "plate_pcp": 0.0015791522972972976
+                    },
+                    {
+                        "plate_id": 12795137,
+                        "plate_name": "高管增持",
+                        "plate_pcp": -0.0010914391722222224
+                    },
+                    {
+                        "plate_id": 91715730,
+                        "plate_name": "生物柴油",
+                        "plate_pcp": -0.0025302987333333336
+                    }
+                ]
+            },
+            "plate_abnormal_event_data": {},
+            "good_or_bad": 1
+        },
+        {
+            "id": 8507591,
+            "target": "000659.SZ",
+            "event_type": 10005,
+            "event_timestamp": 1768546515,
+            "stock_abnormal_event_data": {
+                "symbol": "000659.SZ",
+                "name": "珠海中富",
+                "mtm": 0.034168564920273,
+                "pcp": 0.09134615384615374,
+                "price": 4.54,
+                "related_plates": [
+                    {
+                        "plate_id": 58896585,
+                        "plate_name": "横琴新区",
+                        "plate_pcp": -0.007668294509090911
+                    },
+                    {
+                        "plate_id": 66964210,
+                        "plate_name": "地摊经济",
+                        "plate_pcp": -0.004866452263636364
+                    },
+                    {
+                        "plate_id": 18811806,
+                        "plate_name": "包装印刷",
+                        "plate_pcp": 0.00006722489166666664
+                    },
+                    {
+                        "plate_id": 21790494,
+                        "plate_name": "粤港澳大湾区",
+                        "plate_pcp": -0.00735118507260274
+                    }
+                ]
+            },
+            "plate_abnormal_event_data": {},
+            "good_or_bad": 1
+        },
+        {
+            "id": 8507590,
+            "target": "002048.SZ",
+            "event_type": 10001,
+            "event_timestamp": 1768546512,
+            "stock_abnormal_event_data": {
+                "symbol": "002048.SZ",
+                "name": "宁波华翔",
+                "pcp": 0.10006830601092886,
+                "price": 32.21,
+                "related_plates": [
+                    {
+                        "plate_id": 22082034,
+                        "plate_name": "汽车零部件",
+                        "plate_pcp": 0.01595772831541354
+                    },
+                    {
+                        "plate_id": 124498,
+                        "plate_name": "蔚来汽车概念股",
+                        "plate_pcp": 0.015517682811111115
+                    },
+                    {
+                        "plate_id": 15270174,
+                        "plate_name": "高股息",
+                        "plate_pcp": -0.008273441064864868
+                    },
+                    {
+                        "plate_id": 87009566,
+                        "plate_name": "人形机器人",
+                        "plate_pcp": 0.023654250789473683
+                    },
+                    {
+                        "plate_id": 16845721,
+                        "plate_name": "特斯拉",
+                        "plate_pcp": 0.015782805232704394
+                    }
+                ]
+            },
+            "plate_abnormal_event_data": {},
+            "good_or_bad": 1
+        },
+        {
+            "id": 8507589,
+            "target": "002048.SZ",
+            "event_type": 10003,
+            "event_timestamp": 1768546509,
+            "stock_abnormal_event_data": {
+                "symbol": "002048.SZ",
+                "name": "宁波华翔",
+                "pcp": 0.10006830601092886,
+                "price": 32.21,
+                "related_plates": [
+                    {
+                        "plate_id": 16845721,
+                        "plate_name": "特斯拉",
+                        "plate_pcp": 0.015782805232704394
+                    },
+                    {
+                        "plate_id": 22082034,
+                        "plate_name": "汽车零部件",
+                        "plate_pcp": 0.01595772831541354
+                    },
+                    {
+                        "plate_id": 124498,
+                        "plate_name": "蔚来汽车概念股",
+                        "plate_pcp": 0.015517682811111115
+                    },
+                    {
+                        "plate_id": 15270174,
+                        "plate_name": "高股息",
+                        "plate_pcp": -0.008273441064864868
+                    },
+                    {
+                        "plate_id": 87009566,
+                        "plate_name": "人形机器人",
+                        "plate_pcp": 0.023654250789473683
+                    }
+                ]
+            },
+            "plate_abnormal_event_data": {},
+            "good_or_bad": 2
+        },
+        {
+            "id": 8507588,
+            "target": "600667.SS",
+            "event_type": 10007,
+            "event_timestamp": 1768546508,
+            "stock_abnormal_event_data": {
+                "symbol": "600667.SS",
+                "name": "太极实业",
+                "pcp": 0.10000000000000007,
+                "price": 9.46,
+                "related_plates": [
+                    {
+                        "plate_id": 40280753,
+                        "plate_name": "BIPV概念",
+                        "plate_pcp": 0.0004183977374999997
+                    },
+                    {
+                        "plate_id": 16844702,
+                        "plate_name": "半导体",
+                        "plate_pcp": 0.03751531007822576
+                    },
+                    {
+                        "plate_id": 21825682,
+                        "plate_name": "光伏",
+                        "plate_pcp": 0.009318849777659573
+                    },
+                    {
+                        "plate_id": 53171153,
+                        "plate_name": "国企改革",
+                        "plate_pcp": -0.005900673484432433
+                    },
+                    {
+                        "plate_id": 25195410,
+                        "plate_name": "江苏国企改革",
+                        "plate_pcp": 0.0008504318671875006
+                    },
+                    {
+                        "plate_id": 4670889,
+                        "plate_name": "DRAM（内存）",
+                        "plate_pcp": 0.06698055323478262
+                    },
+                    {
+                        "plate_id": 31765737,
+                        "plate_name": "国产芯片",
+                        "plate_pcp": 0.027346926211788615
+                    },
+                    {
+                        "plate_id": 13843150,
+                        "plate_name": "长三角一体化",
+                        "plate_pcp": -0.005545077229906543
+                    },
+                    {
+                        "plate_id": 65767826,
+                        "plate_name": "中芯国际概念股",
+                        "plate_pcp": 0.03475775958431373
+                    }
+                ]
+            },
+            "plate_abnormal_event_data": {},
+            "good_or_bad": 2
+        },
+        {
+            "id": 8507587,
+            "target": "279",
+            "event_type": 11001,
+            "event_timestamp": 1768546500,
+            "stock_abnormal_event_data": {},
+            "plate_abnormal_event_data": {
+                "plate_id": 25638417,
+                "plate_name": "医药",
+                "pcp": -0.012119929233529416,
+                "related_stocks": [
+                    {
+                        "symbol": "002788.SZ",
+                        "name": "鹭燕医药",
+                        "mtm": -0.10013717421125,
+                        "pcp": -0.10013717421124836
+                    },
+                    {
+                        "symbol": "688319.SS",
+                        "name": "欧林生物",
+                        "mtm": -0.035,
+                        "pcp": -0.14045906132237074
+                    },
+                    {
+                        "symbol": "688690.SS",
+                        "name": "纳微科技",
+                        "mtm": -0.026222537207654,
+                        "pcp": -0.06973595125253884
+                    }
+                ]
+            },
+            "good_or_bad": 2
+        },
+        {
+            "id": 8507586,
+            "target": "002799.SZ",
+            "event_type": 10002,
+            "event_timestamp": 1768546500,
+            "stock_abnormal_event_data": {
+                "symbol": "002799.SZ",
+                "name": "环球印务",
+                "pcp": -0.09999999999999998,
+                "price": 8.55,
+                "related_plates": [
+                    {
+                        "plate_id": 5065425,
+                        "plate_name": "字节跳动概念股",
+                        "plate_pcp": -0.035164239902272715
+                    },
+                    {
+                        "plate_id": 99510478,
+                        "plate_name": "陕西国企改革",
+                        "plate_pcp": -0.0028652609566666666
+                    },
+                    {
+                        "plate_id": 30605897,
+                        "plate_name": "数字经济",
+                        "plate_pcp": -0.02314769072484275
+                    },
+                    {
+                        "plate_id": 53171153,
+                        "plate_name": "国企改革",
+                        "plate_pcp": -0.005900673484432433
+                    },
+                    {
+                        "plate_id": 33246089,
+                        "plate_name": "阿里巴巴概念股",
+                        "plate_pcp": -0.02771110313540669
+                    },
+                    {
+                        "plate_id": 97015161,
+                        "plate_name": "区块链",
+                        "plate_pcp": -0.02748709889502487
+                    },
+                    {
+                        "plate_id": 17277266,
+                        "plate_name": "造纸",
+                        "plate_pcp": -0.003796042364864864
+                    },
+                    {
+                        "plate_id": 37112745,
+                        "plate_name": "快手概念股",
+                        "plate_pcp": -0.045460890402564104
+                    },
+                    {
+                        "plate_id": 18811806,
+                        "plate_name": "包装印刷",
+                        "plate_pcp": 0.00006722489166666664
+                    }
+                ]
+            },
+            "plate_abnormal_event_data": {},
+            "good_or_bad": 2
+        },
+        {
+            "id": 8507585,
+            "target": "002799.SZ",
+            "event_type": 10004,
+            "event_timestamp": 1768546497,
+            "stock_abnormal_event_data": {
+                "symbol": "002799.SZ",
+                "name": "环球印务",
+                "mtm": 0.0011695906432748,
+                "pcp": -0.09894736842105256,
+                "price": 8.56,
+                "related_plates": [
+                    {
+                        "plate_id": 53171153,
+                        "plate_name": "国企改革",
+                        "plate_pcp": -0.005900673484432433
+                    },
+                    {
+                        "plate_id": 99510478,
+                        "plate_name": "陕西国企改革",
+                        "plate_pcp": -0.0028652609566666666
+                    },
+                    {
+                        "plate_id": 30605897,
+                        "plate_name": "数字经济",
+                        "plate_pcp": -0.02314769072484275
+                    },
+                    {
+                        "plate_id": 33246089,
+                        "plate_name": "阿里巴巴概念股",
+                        "plate_pcp": -0.02771110313540669
+                    },
+                    {
+                        "plate_id": 18811806,
+                        "plate_name": "包装印刷",
+                        "plate_pcp": 0.00006722489166666664
+                    },
+                    {
+                        "plate_id": 97015161,
+                        "plate_name": "区块链",
+                        "plate_pcp": -0.02748709889502487
+                    },
+                    {
+                        "plate_id": 5065425,
+                        "plate_name": "字节跳动概念股",
+                        "plate_pcp": -0.035164239902272715
+                    },
+                    {
+                        "plate_id": 17277266,
+                        "plate_name": "造纸",
+                        "plate_pcp": -0.003796042364864864
+                    },
+                    {
+                        "plate_id": 37112745,
+                        "plate_name": "快手概念股",
+                        "plate_pcp": -0.045460890402564104
+                    }
+                ]
+            },
+            "plate_abnormal_event_data": {},
+            "good_or_bad": 1
+        },
+        {
+            "id": 8507584,
+            "target": "567",
+            "event_type": 11001,
+            "event_timestamp": 1768546494,
+            "stock_abnormal_event_data": {},
+            "plate_abnormal_event_data": {
+                "plate_id": 53171153,
+                "plate_name": "国企改革",
+                "pcp": -0.005900673484432433,
+                "related_stocks": [
+                    {
+                        "symbol": "600776.SS",
+                        "name": "东方通信",
+                        "mtm": -0.10004257130694,
+                        "pcp": -0.10004257130693904
+                    },
+                    {
+                        "symbol": "600783.SS",
+                        "name": "鲁信创投",
+                        "mtm": -0.028378378378378,
+                        "pcp": -0.09984350547730823
+                    },
+                    {
+                        "symbol": "600986.SS",
+                        "name": "浙文互联",
+                        "mtm": -0.099551569506727,
+                        "pcp": -0.0995515695067266
+                    }
+                ]
+            },
+            "good_or_bad": 2
+        },
+        {
+            "id": 8507583,
+            "target": "210",
+            "event_type": 11001,
+            "event_timestamp": 1768546488,
+            "stock_abnormal_event_data": {},
+            "plate_abnormal_event_data": {
+                "plate_id": 21825682,
+                "plate_name": "光伏",
+                "pcp": 0.009318849777659573,
+                "related_stocks": [
+                    {
+                        "symbol": "600537.SS",
+                        "name": "亿晶光电",
+                        "mtm": -0.1,
+                        "pcp": -0.09999999999999998
+                    },
+                    {
+                        "symbol": "603778.SS",
+                        "name": "国晟科技",
+                        "mtm": -0.099799599198397,
+                        "pcp": -0.09979959919839676
+                    },
+                    {
+                        "symbol": "600477.SS",
+                        "name": "杭萧钢构",
+                        "mtm": -0.099750623441396,
+                        "pcp": -0.09975062344139651
+                    }
+                ]
+            },
+            "good_or_bad": 2
+        },
+        {
+            "id": 8507582,
+            "target": "002048.SZ",
+            "event_type": 10001,
+            "event_timestamp": 1768546488,
+            "stock_abnormal_event_data": {
+                "symbol": "002048.SZ",
+                "name": "宁波华翔",
+                "pcp": 0.10006830601092886,
+                "price": 32.21,
+                "related_plates": [
+                    {
+                        "plate_id": 87009566,
+                        "plate_name": "人形机器人",
+                        "plate_pcp": 0.023654250789473683
+                    },
+                    {
+                        "plate_id": 16845721,
+                        "plate_name": "特斯拉",
+                        "plate_pcp": 0.015782805232704394
+                    },
+                    {
+                        "plate_id": 22082034,
+                        "plate_name": "汽车零部件",
+                        "plate_pcp": 0.01595772831541354
+                    },
+                    {
+                        "plate_id": 124498,
+                        "plate_name": "蔚来汽车概念股",
+                        "plate_pcp": 0.015517682811111115
+                    },
+                    {
+                        "plate_id": 15270174,
+                        "plate_name": "高股息",
+                        "plate_pcp": -0.008273441064864868
+                    }
+                ]
+            },
+            "plate_abnormal_event_data": {},
+            "good_or_bad": 1
+        },
+        {
+            "id": 8507581,
+            "target": "002048.SZ",
+            "event_type": 10003,
+            "event_timestamp": 1768546485,
+            "stock_abnormal_event_data": {
+                "symbol": "002048.SZ",
+                "name": "宁波华翔",
+                "mtm": -0.00031046258925793,
+                "pcp": 0.0997267759562841,
+                "price": 32.2,
+                "related_plates": [
+                    {
+                        "plate_id": 16845721,
+                        "plate_name": "特斯拉",
+                        "plate_pcp": 0.015782805232704394
+                    },
+                    {
+                        "plate_id": 22082034,
+                        "plate_name": "汽车零部件",
+                        "plate_pcp": 0.01595772831541354
+                    },
+                    {
+                        "plate_id": 124498,
+                        "plate_name": "蔚来汽车概念股",
+                        "plate_pcp": 0.015517682811111115
+                    },
+                    {
+                        "plate_id": 15270174,
+                        "plate_name": "高股息",
+                        "plate_pcp": -0.008273441064864868
+                    },
+                    {
+                        "plate_id": 87009566,
+                        "plate_name": "人形机器人",
+                        "plate_pcp": 0.023654250789473683
+                    }
+                ]
+            },
+            "plate_abnormal_event_data": {},
+            "good_or_bad": 2
+        },
+        {
+            "id": 8507580,
+            "target": "789",
+            "event_type": 11001,
+            "event_timestamp": 1768546476,
+            "stock_abnormal_event_data": {},
+            "plate_abnormal_event_data": {
+                "plate_id": 87056697,
+                "plate_name": "智能电网",
+                "pcp": 0.01149997172248804,
+                "related_stocks": [
+                    {
+                        "symbol": "000409.SZ",
+                        "name": "云鼎科技",
+                        "mtm": -0.015164279696714,
+                        "pcp": -0.07295796986518632
+                    },
+                    {
+                        "symbol": "002545.SZ",
+                        "name": "东方铁塔",
+                        "mtm": -0.03125,
+                        "pcp": 0.01661565369479656
+                    },
+                    {
+                        "symbol": "688171.SS",
+                        "name": "纬德信息",
+                        "mtm": -0.030521943290591,
+                        "pcp": -0.011053795136330202
+                    }
+                ]
+            },
+            "good_or_bad": 2
+        },
+        {
+            "id": 8507579,
+            "target": "539",
+            "event_type": 11001,
+            "event_timestamp": 1768546476,
+            "stock_abnormal_event_data": {},
+            "plate_abnormal_event_data": {
+                "plate_id": 16116825,
+                "plate_name": "泛在电力物联网",
+                "pcp": 0.012520642643262412,
+                "related_stocks": [
+                    {
+                        "symbol": "605056.SS",
+                        "name": "咸亨国际",
+                        "mtm": -0.030542390731964,
+                        "pcp": 0.04246885617214047
+                    },
+                    {
+                        "symbol": "600869.SS",
+                        "name": "远东股份",
+                        "mtm": 0.016848364717542,
+                        "pcp": 0.01684836471754214
+                    },
+                    {
+                        "symbol": "002857.SZ",
+                        "name": "三晖电气",
+                        "mtm": 0.020833333333333003,
+                        "pcp": 0.02083333333333348
+                    }
+                ]
+            },
+            "good_or_bad": 2
+        }
+    ]
+}
+
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+选股宝涨跌停数据API服务（适配Java SpringBoot调用）
+地址：http://localhost:8000
+文档：http://localhost:8000/docs
+"""
+import logging
+import re
+import sys
+import json
+import os
+from datetime import datetime, timedelta, date
+from typing import Optional, List, Dict, Any, Union
+from decimal import Decimal
+
+import requests
+from fastapi import FastAPI, HTTPException, Query
+from fastapi.middleware.cors import CORSMiddleware
+# 移除缓存相关导入
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+import urllib3
+from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
+
+# ========== 配置日志编码，解决中文乱码 ==========
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stderr.reconfigure(encoding='utf-8')
+
+# 配置日志
+try:
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+        handlers=[
+            logging.StreamHandler(),
+            logging.FileHandler(
+                "xuangubao_stock_api.log",
+                mode='a',
+                encoding='utf-8'
+            )
+        ]
+    )
+except PermissionError:
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+        handlers=[logging.StreamHandler()]
+    )
+logger = logging.getLogger("xuangubao_stock_api")
+
+# FastAPI应用
+app = FastAPI(title="选股宝涨跌停数据API", version="1.0")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["GET"],
+    allow_headers=["*"],
+)
+
+# ========== 移除缓存配置（核心修改1） ==========
+# 注释/删除缓存相关代码
+# cache = TTLCache(maxsize=500, ttl=300)
+
+# ========== 配置常量 ==========
+# 选股宝API地址
+XUANGUBAO_API_BASE = "https://flash-api.xuangubao.com.cn/api/pool/detail"
+# 股票池类型映射
+POOL_TYPES = {
+    "zt": "limit_up",          # 涨停池
+    "dt": "limit_down",        # 跌停池
+    "yesterday_zt": "yesterday_limit_up",  # 昨日涨停
+    "broken_zt": "limit_up_broken",        # 炸板池
+    "super_stock": "super_stock"           # 强势股池
+}
+
+# ========== 禁用代理，确保接口访问正常 ==========
+proxy_env_vars = ['http_proxy', 'https_proxy', 'HTTP_PROXY', 'HTTPS_PROXY', 'all_proxy', 'ALL_PROXY']
+for var in proxy_env_vars:
+    os.environ.pop(var, None)
+
+# 禁用urllib3警告
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+def init_session() -> requests.Session:
+    """初始化请求会话，配置重试和超时"""
+    session = requests.Session()
+    session.verify = False
+    session.trust_env = False  # 强制不使用代理
+
+    # 配置重试策略
+    retry_strategy = Retry(
+        total=3,
+        backoff_factor=0.5,
+        allowed_methods=["GET"],
+        status_forcelist=[429, 500, 502, 503, 504]
+    )
+    adapter = HTTPAdapter(max_retries=retry_strategy)
+    session.mount("https://", adapter)
+    session.mount("http://", adapter)
+
+    # 超时设置
+    session.timeout = 15
+
+    # 请求头伪装
+    session.headers.update({
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Referer": "https://xuangubao.com.cn",
+        "Accept": "application/json, text/plain, */*",
+        "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8"
+    })
+    return session
+
+session = init_session()
+
+def timestamp_to_datetime(timestamp: Union[int, float, None]) -> Optional[str]:
+    """时间戳转换为字符串（格式：yyyy-MM-dd HH:mm:ss）"""
+    if not timestamp or timestamp == 0:
+        return None
+    try:
+        return datetime.fromtimestamp(int(timestamp)).strftime("%Y-%m-%d %H:%M:%S")
+    except Exception as e:
+        logger.error(f"时间戳转换失败：{timestamp}", exc_info=True)
+        return None
+
+def calculate_lock_amount(lock_ratio: Union[float, None], market_cap: Union[float, None]) -> Optional[float]:
+    """计算封单金额（封单比 * 流通市值）"""
+    if lock_ratio is None or market_cap is None:
+        return None
+    try:
+        # 封单比为小数（如0.0002897804 → 0.02897804%），需转换为百分比后计算
+        return round(lock_ratio * market_cap, 2)
+    except Exception as e:
+        logger.error(f"封单金额计算失败：lock_ratio={lock_ratio}, market_cap={market_cap}", exc_info=True)
+        return None
+
+def parse_stock_data(stock: Dict[str, Any], pool_type: str, trade_date: str) -> Dict[str, Any]:
+    """解析单只股票数据，处理空值和None"""
+    # 基础数据（使用指定的交易日期）
+    base_data = {
+        "trade_date": trade_date,                          # 交易日期（传入的指定日期）
+        "stock_code": stock.get("symbol", ""),              # 股票代码
+        "stock_name": stock.get("stock_chi_name", ""),      # 股票名称
+        "stock_type": stock.get("stock_type", 0),           # 股票类型
+        "price": round(stock.get("price", 0), 2) if stock.get("price") is not None else 0,  # 最新价
+        "change_percent": round(stock.get("change_percent", 0) * 100, 2) if stock.get("change_percent") is not None else 0,  # 涨跌幅（%）
+        "turnover_ratio": round(stock.get("turnover_ratio", 0) * 100, 2) if stock.get("turnover_ratio") is not None else 0,  # 换手率（%）
+        "circulation_market_cap": round(stock.get("non_restricted_capital", 0) / 100000000, 2) if stock.get("non_restricted_capital") is not None else 0,  # 流通市值（亿元）
+        "total_market_cap": round(stock.get("total_capital", 0) / 100000000, 2) if stock.get("total_capital") is not None else 0,  # 总市值（亿元）
+        "issue_price": round(stock.get("issue_price", 0), 2) if stock.get("issue_price") is not None else 0,  # 发行价
+        "listed_date": timestamp_to_datetime(stock.get("listed_date")),  # 上市日期
+        "pool_type": pool_type,  # 股票池类型（zt/dt/yesterday_zt/broken_zt/super_stock）
+    }
+
+    # 封单相关数据（区分涨停/跌停）
+    if pool_type in ["zt", "yesterday_zt", "broken_zt", "super_stock"]:
+        # 涨停相关封单
+        buy_lock_ratio = stock.get("buy_lock_volume_ratio", 0) or 0
+        current_lock_amount = calculate_lock_amount(buy_lock_ratio, stock.get("non_restricted_capital"))
+        base_data.update({
+            "buy_lock_ratio": round(buy_lock_ratio * 100, 4),  # 买盘封单比（%）
+            "sell_lock_ratio": round(stock.get("sell_lock_volume_ratio", 0) * 100, 4) if stock.get("sell_lock_volume_ratio") is not None else 0,  # 卖盘封单比（%）
+            "current_lock_amount": current_lock_amount,  # 当前封单金额（元）
+            "max_lock_amount": current_lock_amount,  # 最高封单金额（默认等于当前，如需历史峰值需额外计算）
+        })
+    elif pool_type == "dt":
+        # 跌停相关封单
+        sell_lock_ratio = stock.get("sell_lock_volume_ratio", 0) or 0
+        current_lock_amount = calculate_lock_amount(sell_lock_ratio, stock.get("non_restricted_capital"))
+        base_data.update({
+            "buy_lock_ratio": round(stock.get("buy_lock_volume_ratio", 0) * 100, 4) if stock.get("buy_lock_volume_ratio") is not None else 0,  # 买盘封单比（%）
+            "sell_lock_ratio": round(sell_lock_ratio * 100, 4),  # 卖盘封单比（%）
+            "current_lock_amount": current_lock_amount,  # 当前封单金额（元）
+            "max_lock_amount": current_lock_amount,  # 最高封单金额
+        })
+
+    # 涨停/跌停相关数据
+    if pool_type == "zt":
+        base_data.update({
+            "limit_up_days": stock.get("limit_up_days", 0),  # 连板数
+            "break_limit_up_times": stock.get("break_limit_up_times", 0),  # 开板次数
+            "first_limit_up_time": timestamp_to_datetime(stock.get("first_limit_up")),  # 首次封板时间
+            "last_limit_up_time": timestamp_to_datetime(stock.get("last_limit_up")),    # 最后封板时间
+        })
+    elif pool_type == "dt":
+        base_data.update({
+            "limit_down_days": stock.get("limit_down_days", 0),  # 连跌停数
+            "break_limit_down_times": stock.get("break_limit_down_times", 0),  # 开板次数
+            "first_limit_down_time": timestamp_to_datetime(stock.get("first_limit_down")),  # 首次封跌停时间
+            "last_limit_down_time": timestamp_to_datetime(stock.get("last_limit_down")),    # 最后封跌停时间
+        })
+    elif pool_type == "yesterday_zt":
+        base_data.update({
+            "yesterday_limit_up_days": stock.get("yesterday_limit_up_days", 0),  # 昨日连板数
+            "yesterday_break_limit_up_times": stock.get("yesterday_break_limit_up_times", 0),  # 昨日开板次数
+            "yesterday_first_limit_up_time": timestamp_to_datetime(stock.get("yesterday_first_limit_up")),  # 昨日首次封板时间
+            "yesterday_last_limit_up_time": timestamp_to_datetime(stock.get("yesterday_last_limit_up")),    # 昨日最后封板时间
+        })
+    elif pool_type == "broken_zt":
+        base_data.update({
+            "break_limit_up_times": stock.get("break_limit_up_times", 0),  # 炸板次数
+            "first_limit_up_time": timestamp_to_datetime(stock.get("first_limit_up")),  # 首次封板时间
+            "last_break_limit_up_time": timestamp_to_datetime(stock.get("last_break_limit_up")),  # 最后炸板时间
+        })
+    elif pool_type == "super_stock":
+        base_data.update({
+            "limit_up_days": stock.get("limit_up_days", 0),  # 连板数
+            "m_days_n_boards": f"{stock.get('m_days_n_boards_days', 0)}天{stock.get('m_days_n_boards_boards', 0)}板",  # 几天几板
+            "first_limit_up_time": timestamp_to_datetime(stock.get("first_limit_up")),  # 首次封板时间
+            "last_limit_up_time": timestamp_to_datetime(stock.get("last_limit_up")),    # 最后封板时间
+        })
+
+    # 上涨/下跌原因
+    surge_reason = stock.get("surge_reason", {}) or {}
+    base_data.update({
+        "stock_reason": surge_reason.get("stock_reason", ""),  # 股票上涨/下跌原因
+        "related_plates": json.dumps([
+            {"plate_name": plate.get("plate_name", ""), "plate_reason": plate.get("plate_reason", "")}
+            for plate in surge_reason.get("related_plates", []) if plate
+        ], ensure_ascii=False)  # 相关板块（JSON字符串）
+    })
+
+    # 处理所有None值为默认空字符串/0
+    for key, value in base_data.items():
+        if value is None:
+            if isinstance(base_data[key], (int, float)):
+                base_data[key] = 0
+            else:
+                base_data[key] = ""
+
+    return base_data
+
+@retry(
+    stop=stop_after_attempt(3),
+    wait=wait_exponential(multiplier=1, min=2, max=10),
+    retry=retry_if_exception_type((requests.exceptions.RequestException, TimeoutError)),
+    reraise=True
+)
+def fetch_stock_pool(pool_key: str, trade_date: Optional[str] = None) -> List[Dict[str, Any]]:
+    """
+    获取指定股票池数据（支持指定日期）
+    :param pool_key: 股票池类型
+    :param trade_date: 交易日期（格式：yyyy-MM-dd），为空则默认当天
+    :return: 解析后的股票数据列表
+    """
+    if pool_key not in POOL_TYPES:
+        raise HTTPException(status_code=400, detail=f"不支持的股票池类型：{pool_key}，支持类型：{list(POOL_TYPES.keys())}")
+
+    # 处理日期参数，为空则默认当天
+    if not trade_date:
+        trade_date = datetime.now().strftime("%Y-%m-%d")
+    else:
+        # 验证日期格式
+        try:
+            datetime.strptime(trade_date, "%Y-%m-%d")
+        except ValueError:
+            raise HTTPException(status_code=400, detail=f"日期格式错误：{trade_date}，正确格式：yyyy-MM-dd")
+
+    pool_name = POOL_TYPES[pool_key]
+    # ========== 移除缓存key相关代码（核心修改2） ==========
+    # cache_key = f"{pool_key}_{trade_date}"  # 按日期+池类型缓存
+
+    # ========== 移除缓存读取逻辑（核心修改3） ==========
+    # 从缓存获取（删除此段逻辑）
+    # if cache_key in cache:
+    #     logger.info(f"从缓存获取{trade_date}的{pool_key}股票池数据")
+    #     return cache[cache_key]
+
+    # 调用选股宝API（适配历史日期）
+    try:
+        # 构建请求参数，添加日期参数（选股宝API支持date参数）
+        params = {"pool_name": pool_name}
+        if trade_date != datetime.now().strftime("%Y-%m-%d"):
+            params["date"] = trade_date
+
+        response = session.get(XUANGUBAO_API_BASE, params=params)
+        response.raise_for_status()
+        result = response.json()
+
+        if result.get("code") != 20000:
+            logger.error(f"选股宝API返回错误：{result.get('message')}")
+            raise HTTPException(status_code=500, detail=f"选股宝API错误：{result.get('message')}")
+
+        raw_data = result.get("data", []) or []
+        if not raw_data:
+            logger.info(f"{trade_date}的{pool_key}股票池无数据")
+            # ========== 移除缓存写入逻辑（核心修改4） ==========
+            # cache[cache_key] = []
+            return []
+
+        # 解析数据（传入指定的交易日期）
+        parsed_data = [parse_stock_data(stock, pool_key, trade_date) for stock in raw_data]
+        # ========== 移除缓存写入逻辑（核心修改5） ==========
+        # cache[cache_key] = parsed_data
+        logger.info(f"成功获取{trade_date}的{pool_key}股票池数据，共{len(parsed_data)}只股票")
+        return parsed_data
+
+    except Exception as e:
+        logger.error(f"获取{trade_date}的{pool_key}股票池数据失败", exc_info=True)
+        raise HTTPException(status_code=500, detail=f"获取数据失败：{str(e)}")
+
+def get_stock_pool_statistics(pool_key: str, trade_date: Optional[str] = None) -> Dict[str, Any]:
+    """
+    统计指定日期、指定股票池的核心数据
+    :param pool_key: 股票池类型
+    :param trade_date: 交易日期，为空则默认当天
+    :return: 统计结果
+    """
+    # 获取原始数据
+    stock_data = fetch_stock_pool(pool_key, trade_date)
+    if not stock_data:
+        return {
+            "code": 200,
+            "msg": "success",
+            "trade_date": trade_date or datetime.now().strftime("%Y-%m-%d"),
+            "pool_key": pool_key,
+            "statistics": {
+                "total_count": 0,
+                "avg_price": 0.0,
+                "avg_change_percent": 0.0,
+                "avg_turnover_ratio": 0.0,
+                "total_circulation_market_cap": 0.0,
+                "top_stocks_by_price": [],
+                "top_stocks_by_change": []
+            },
+            "detail_data": []
+        }
+
+    # 计算统计指标
+    total_count = len(stock_data)
+    total_price = 0.0
+    total_change = 0.0
+    total_turnover = 0.0
+    total_circulation = 0.0
+
+    # 提取价格和涨跌幅用于排序
+    price_list = []
+    change_list = []
+
+    for stock in stock_data:
+        price = float(stock.get("price", 0))
+        change = float(stock.get("change_percent", 0))
+        turnover = float(stock.get("turnover_ratio", 0))
+        circulation = float(stock.get("circulation_market_cap", 0))
+
+        total_price += price
+        total_change += change
+        total_turnover += turnover
+        total_circulation += circulation
+
+        price_list.append({
+            "stock_code": stock.get("stock_code"),
+            "stock_name": stock.get("stock_name"),
+            "price": price
+        })
+        change_list.append({
+            "stock_code": stock.get("stock_code"),
+            "stock_name": stock.get("stock_name"),
+            "change_percent": change
+        })
+
+    # 计算平均值
+    avg_price = round(total_price / total_count, 2) if total_count > 0 else 0.0
+    avg_change = round(total_change / total_count, 2) if total_count > 0 else 0.0
+    avg_turnover = round(total_turnover / total_count, 2) if total_count > 0 else 0.0
+
+    # 按价格和涨跌幅排序（取前10）
+    price_list.sort(key=lambda x: x["price"], reverse=True)
+    change_list.sort(key=lambda x: x["change_percent"], reverse=True)
+
+    # 构建统计结果
+    statistics = {
+        "total_count": total_count,  # 股票总数
+        "avg_price": avg_price,      # 平均价格
+        "avg_change_percent": avg_change,  # 平均涨跌幅
+        "avg_turnover_ratio": avg_turnover,  # 平均换手率
+        "total_circulation_market_cap": round(total_circulation, 2),  # 总流通市值（亿元）
+        "top_10_by_price": price_list[:10],  # 价格前10股票
+        "top_10_by_change": change_list[:10]  # 涨跌幅前10股票
+    }
+
+    return {
+        "code": 200,
+        "msg": "success",
+        "trade_date": trade_date or datetime.now().strftime("%Y-%m-%d"),
+        "pool_key": pool_key,
+        "statistics": statistics,
+        "detail_data": stock_data  # 包含详细数据，可按需返回
+    }
+
+# ========== API接口 ==========
+@app.get("/api/stock/pool/{pool_key}", summary="获取指定股票池数据")
+def get_stock_pool(
+    pool_key: str,
+    trade_date: Optional[str] = Query(None, description="交易日期（格式：yyyy-MM-dd），为空则默认当天")
+):
+    """
+    获取股票池数据
+    - pool_key: 股票池类型（zt=涨停池, dt=跌停池, yesterday_zt=昨日涨停, broken_zt=炸板池, super_stock=强势股池）
+    - trade_date: 交易日期（格式：yyyy-MM-dd），为空则默认当天
+    """
+    try:
+        data = fetch_stock_pool(pool_key, trade_date)
+        return {
+            "code": 200,
+            "msg": "success",
+            "trade_date": trade_date or datetime.now().strftime("%Y-%m-%d"),
+            "data": data,
+            "count": len(data)
+        }
+    except HTTPException as e:
+        raise e
+    except Exception as e:
+        logger.error(f"API接口异常", exc_info=True)
+        return {
+            "code": 500,
+            "msg": str(e),
+            "trade_date": trade_date or datetime.now().strftime("%Y-%m-%d"),
+            "data": [],
+            "count": 0
+        }
+
+@app.get("/api/stock/pool/{pool_key}/statistics", summary="统计指定日期、指定股票池数据")
+def get_stock_pool_statistics_api(
+    pool_key: str,
+    trade_date: Optional[str] = Query(None, description="交易日期（格式：yyyy-MM-dd），为空则默认当天")
+):
+    """
+    统计指定日期、指定股票池的核心数据
+    - pool_key: 股票池类型
+    - trade_date: 交易日期，为空则默认当天
+    """
+    try:
+        return get_stock_pool_statistics(pool_key, trade_date)
+    except HTTPException as e:
+        raise e
+    except Exception as e:
+        logger.error(f"统计接口异常", exc_info=True)
+        return {
+            "code": 500,
+            "msg": str(e),
+            "trade_date": trade_date or datetime.now().strftime("%Y-%m-%d"),
+            "pool_key": pool_key,
+            "statistics": {},
+            "detail_data": []
+        }
+
+@app.get("/api/stock/pool/all", summary="获取所有股票池数据")
+def get_all_stock_pools(
+    trade_date: Optional[str] = Query(None, description="交易日期（格式：yyyy-MM-dd），为空则默认当天")
+):
+    """获取所有股票池（涨停、跌停、昨日涨停、炸板池、强势股池）数据"""
+    try:
+        result = {}
+        total_count = 0
+        for pool_key in POOL_TYPES.keys():
+            data = fetch_stock_pool(pool_key, trade_date)
+            result[pool_key] = data
+            total_count += len(data)
+
+        return {
+            "code": 200,
+            "msg": "success",
+            "trade_date": trade_date or datetime.now().strftime("%Y-%m-%d"),
+            "data": result,
+            "total_count": total_count
+        }
+    except Exception as e:
+        logger.error(f"获取所有股票池数据失败", exc_info=True)
+        return {
+            "code": 500,
+            "msg": str(e),
+            "trade_date": trade_date or datetime.now().strftime("%Y-%m-%d"),
+            "data": {},
+            "total_count": 0
+        }
+
+# ========== 启动服务 ==========
+if __name__ == "__main__":
+    import uvicorn
+
+    # 打印依赖安装提示（移除cachetools依赖）
+    required_packages = [
+        "requests>=2.31.0",
+        "fastapi>=0.104.1",
+        "uvicorn>=0.24.0",
+        # 移除cachetools依赖
+        "tenacity>=8.2.3",
+        "urllib3>=2.0.7"
+    ]
+    logger.info("=" * 50)
+    logger.info("依赖安装命令:")
+    logger.info(f"pip install {' '.join(required_packages)}")
+    logger.info("=" * 50)
+
+    # 启动服务（绑定所有IP，端口8000）
+    uvicorn.run(
+        app,
+        host="0.0.0.0",
+        port=8000,
+        log_level="info",
+        access_log=True
+    )
+
+1.提供类似上面的python脚本，用于解析接口的异动情况并用Java调用解析python的api结果入库。
+2.10001,11000,11001是什么类型和作用啥的
+
+https://flash-api.xuangubao.com.cn/api/event/history?count=30&types=10001,10005,10003,10007,10002,10006,10004,10008,10012,10014,10009,10010,11000,11001
