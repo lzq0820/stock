@@ -13,6 +13,7 @@ import org.apache.commons.lang3.StringUtils;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -186,16 +187,16 @@ public class StockPool {
 
     @ApiModelProperty("涨停/跌停原因")
     @TableField(exist = false)
-    private String reason;
+    private List<String> reasonList = new ArrayList<>();
 
     public void buildStockNameAndReason() {
         String relatedPlates = StringUtils.defaultIfBlank(getRelatedPlates(), "[]");
         List<RelatedPlate> relatedPlateList = JsonUtils.parseArray(relatedPlates, RelatedPlate.class);
         List<String> relatedPlateNameList = relatedPlateList.stream().map(RelatedPlate::getPlateName).collect(Collectors.toList());
         List<String> relatedPlateReasonList = relatedPlateList.stream().map(RelatedPlate::getPlateReason).collect(Collectors.toList());
-        setRelatedPlates(getStockReason());
-        setReason(StringUtils.join(relatedPlateNameList, "+"));
-        setStockName(getStockName() + "[" + getPrice() + (StringUtils.isNotBlank(getReason()) ? ("," + getReason()) : "") + "]");
-        setStockReason(StringUtils.defaultIfBlank(StringUtils.join(relatedPlateReasonList, "\n"), null));
+//        setRelatedPlates(getStockReason());
+        setReasonList(relatedPlateNameList);
+//        setStockName(getStockName() + "[" + getPrice() + (reasonList.isEmpty() ? ("," + StringUtils.join(reasonList, ",")) : "") + "]");
+//        setStockReason(StringUtils.defaultIfBlank(StringUtils.join(relatedPlateReasonList, "\n"), null));
     }
 }

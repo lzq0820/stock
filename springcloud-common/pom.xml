@@ -159,6 +159,12 @@
             <artifactId>pagehelper-spring-boot-starter</artifactId>
             <version>1.4.6</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.jsqlparser</groupId>
+            <artifactId>jsqlparser</artifactId>
+            <!-- 与PageHelper 1.4.x匹配的版本：4.9或5.0 -->
+            <version>4.9</version>
+        </dependency>
     </dependencies>
 
     <build>
