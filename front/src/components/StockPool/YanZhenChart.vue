@@ -100,6 +100,13 @@ const highlightKeyword = (text, keyword) => {
   const reg = new RegExp(keyword, 'g')
   return text.replace(reg, `<span style="background-color: yellow;">${keyword}</span>`)
 }
+
+const handleItemClick = (stock) => {
+  // 高亮详情中的关键词
+  const highlightedDetail = highlightKeyword(stock.detail, props.stockReason)
+  // 发射事件供父组件处理
+  emit('select-stock', { ...stock, detail: highlightedDetail })
+}
 </script>
 
 <style scoped>

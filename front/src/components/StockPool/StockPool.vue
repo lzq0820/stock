@@ -43,7 +43,7 @@ import { ref, watch, onMounted } from 'vue'
 import { ElTabs, ElTabPane, ElDrawer } from 'element-plus'
 import FilterPanel from './FilterPanel.vue'
 import YanZhenChart from './YanZhenChart.vue'
-import StockDetail from './StockDetail.vue'
+import StockDetail from './StockDetail.vue' // 注意：这里应该是 StockDetail 而不是 StockPool
 import { getLbjjData, getStockPoolData } from '@/api/stockPool'
 import { formatDate } from '@/utils/date'
 import { extractAllReasons } from '@/utils/filter'

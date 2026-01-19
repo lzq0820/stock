@@ -21,9 +21,11 @@
 
     <!-- 雁阵图 -->
     <YanZhenChart
+        ref="yanZhenChartRef"
         :stock-list="stockList"
         :filter-params="filterParams"
         :stock-reason="filterParams.stockReason"
+        @select-stock="selectStock"
     />
 
     <!-- 股票详情侧边栏 -->
@@ -38,12 +40,11 @@
   </div>
 </template>
 
-<script setup>
-import { ref, watch, onMounted } from 'vue'
+<script setup>import { ref, watch, onMounted } from 'vue'
 import { ElTabs, ElTabPane, ElDrawer } from 'element-plus'
 import FilterPanel from './FilterPanel.vue'
 import YanZhenChart from './YanZhenChart.vue'
-import StockDetail from './StockDetail.vue'
+import StockDetail from './StockDetail.vue'  // 修正：导入 StockDetail 而不是 StockPool
 import { getLbjjData, getStockPoolData } from '@/api/stockPool'
 import { formatDate } from '@/utils/date'
 import { extractAllReasons } from '@/utils/filter'
@@ -61,6 +62,7 @@ const filterParams = ref({
 })
 const detailVisible = ref(false)
 const selectedStock = ref(null)
+const yanZhenChartRef = ref(null)
 
 // 初始化
 onMounted(() => {

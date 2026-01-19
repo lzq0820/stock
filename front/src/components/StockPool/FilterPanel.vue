@@ -1,3 +1,4 @@
+<!--筛选面板组件（reason多选、搜索框）-->
 <template>
   <div class="filter-panel">
     <!-- 隐藏ST股票开关 -->
@@ -24,42 +25,83 @@
 
     <!-- 涨停原因多选 -->
     <div class="filter-item">
-      <el-select
-          v-model="selectedReasons"
-          multiple
-          filterable
-          remote
-          reserve-keyword
-          placeholder="选择涨停原因"
-          :remote-method="handleRemoteSearch"
-          :options="reasonOptions"
-          @change="handleReasonChange"
-      />
+      <div class="search-wrapper">
+        <el-select
+            v-model="selectedReasons"
+            multiple
+            filterable
+            remote
+            reserve-keyword
+            placeholder="选择涨停原因"
+            :remote-method="handleRemoteSearch"
+            :options="reasonOptions"
+            @change="handleReasonChange"
+        />
+        <el-button
+            v-if="selectedReasons.length > 0"
+            icon="Close"
+            size="small"
+            circle
+            class="clear-btn"
+            @click="clearReasons"
+        />
+      </div>
     </div>
 
     <!-- 股票名称搜索 -->
     <div class="filter-item">
-      <el-input
-          v-model="stockName"
-          placeholder="搜索股票名称"
-          @input="handleSearchChange"
-      />
+      <div class="search-wrapper">
+        <el-input
+            v-model="stockName"
+            placeholder="搜索股票名称"
+            @input="handleSearchChange"
+        />
+        <el-button
+            v-if="stockName"
+            icon="Close"
+            size="small"
+            circle
+            class="clear-btn"
+            @click="clearStockName"
+        />
+      </div>
     </div>
 
     <!-- 详情搜索 -->
     <div class="filter-item">
-      <el-input
-          v-model="stockReason"
-          placeholder="搜索股票详情"
-          @input="handleSearchChange"
-      />
+      <div class="search-wrapper">
+        <el-input
+            v-model="stockReason"
+            placeholder="搜索股票详情"
+            @input="handleSearchChange"
+        />
+        <el-button
+            v-if="stockReason"
+            icon="Close"
+            size="small"
+            circle
+            class="clear-btn"
+            @click="clearStockReason"
+        />
+      </div>
+    </div>
+
+    <!-- 清空所有筛选条件按钮 -->
+    <div class="filter-item">
+      <el-button
+          type="warning"
+          plain
+          @click="clearAllFilters"
+      >
+        清空所有筛选条件
+      </el-button>
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref, watch, onMounted } from 'vue'
-import { ElSwitch, ElDatePicker, ElSelect, ElInput } from 'element-plus'
+import { ElSwitch, ElDatePicker, ElSelect, ElInput, ElButton } from 'element-plus'
 import { formatDate, getDisabledDates, getHolidayName } from '@/utils/date'
 import { getHolidayList } from '@/api/holiday'
 
@@ -132,6 +174,31 @@ const handleRemoteSearch = (query) => {
   }
 }
 
+// 清空各个筛选条件
+const clearReasons = () => {
+  selectedReasons.value = []
+  emitFilterChange()
+}
+
+const clearStockName = () => {
+  stockName.value = ''
+  emitFilterChange()
+}
+
+const clearStockReason = () => {
+  stockReason.value = ''
+  emitFilterChange()
+}
+
+// 清空所有筛选条件
+const clearAllFilters = () => {
+  selectedReasons.value = []
+  stockName.value = ''
+  stockReason.value = ''
+  notShowSt.value = 0 // 重置ST股票显示设置
+  emitFilterChange()
+}
+
 // 事件处理
 const handleStSwitch = () => {
   emit('stSwitch', notShowSt.value)
@@ -175,6 +242,23 @@ const emitFilterChange = () => {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  position: relative;
+}
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.clear-btn {
+  position: absolute;
+  right: 8px;
+  z-index: 1;
+  transform: translateY(-50%);
+  top: 50%;
+  background-color: #f5f5f5;
+  border: 1px solid #dcdfe6;
 }
 
 .holiday-tip {
