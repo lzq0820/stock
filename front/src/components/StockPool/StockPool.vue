@@ -21,9 +21,11 @@
 
     <!-- 雁阵图 -->
     <YanZhenChart
+        ref="yanZhenChartRef"
         :stock-list="stockList"
         :filter-params="filterParams"
         :stock-reason="filterParams.stockReason"
+        @select-stock="selectStock"
     />
 
     <!-- 股票详情侧边栏 -->
@@ -43,7 +45,7 @@ import { ref, watch, onMounted } from 'vue'
 import { ElTabs, ElTabPane, ElDrawer } from 'element-plus'
 import FilterPanel from './FilterPanel.vue'
 import YanZhenChart from './YanZhenChart.vue'
-import StockDetail from './StockDetail.vue' // 注意：这里应该是 StockDetail 而不是 StockPool
+import StockDetail from './StockDetail.vue'
 import { getLbjjData, getStockPoolData } from '@/api/stockPool'
 import { formatDate } from '@/utils/date'
 import { extractAllReasons } from '@/utils/filter'
@@ -61,6 +63,8 @@ const filterParams = ref({
 })
 const detailVisible = ref(false)
 const selectedStock = ref(null)
+const yanZhenChartRef = ref(null)
+const loading = ref(false) // 添加加载状态防止重复请求
 
 // 初始化
 onMounted(() => {
@@ -72,14 +76,31 @@ watch(() => activeTab.value, () => {
   fetchStockData()
 })
 
-// 监听日期和ST开关变化
-watch([() => tradeDate.value, () => notShowSt.value], () => {
-  fetchStockData()
+// 分别监听日期和ST开关变化，避免同时变化时触发两次请求
+const updateTradeDate = ref(null)
+const updateNotShowSt = ref(null)
+
+watch(() => tradeDate.value, (newVal) => {
+  if(updateTradeDate.value !== newVal) {
+    updateTradeDate.value = newVal
+    fetchStockData()
+  }
+})
+
+watch(() => notShowSt.value, (newVal) => {
+  if(updateNotShowSt.value !== newVal) {
+    updateNotShowSt.value = newVal
+    fetchStockData()
+  }
 })
 
 // 获取股票数据
 const fetchStockData = async () => {
+  if(loading.value) return; // 防止重复请求
+
   try {
+    loading.value = true
+
     let res
     const params = {
       tradeDate: tradeDate.value,
@@ -100,6 +121,8 @@ const fetchStockData = async () => {
     allReasons.value = extractAllReasons(res.data)
   } catch (error) {
     console.error('获取股票数据失败：', error)
+  } finally {
+    loading.value = false
   }
 }
 
@@ -117,6 +140,7 @@ const handleDateChange = (val) => {
 }
 
 const handleFilterChange = (params) => {
+  // 仅当筛选参数变化时，才更新筛选，不重新请求数据
   filterParams.value = params
 }
 

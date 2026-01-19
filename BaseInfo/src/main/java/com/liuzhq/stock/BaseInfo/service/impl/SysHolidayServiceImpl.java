@@ -30,6 +30,7 @@ import java.security.cert.X509Certificate;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAdjusters;
 import java.util.*;
@@ -435,12 +436,23 @@ public class SysHolidayServiceImpl extends ServiceImpl<SysHolidayMapper, SysHoli
      */
     public LocalDate getValidTradeDate(LocalDate targetDate) {
         int year = targetDate.getYear();
-        List<String> currentHolidayList = query(year, null).stream()
+        List<String> currentHolidayList = query(null, null).stream()
                 .map(item -> FULL_DATE_FORMATTER.format(item.getHolidayDate()))
                 .collect(Collectors.toList());
         List<String> preYearHolidayList = query(year - 1, null).stream()
                 .map(item -> FULL_DATE_FORMATTER.format(item.getHolidayDate()))
                 .collect(Collectors.toList());
+
+        LocalDate now = LocalDate.now();
+
+        if (!targetDate.isBefore(now)) {
+            LocalDateTime dateTimeWithNow = targetDate.atTime(LocalTime.now());
+            int hour = dateTimeWithNow.getHour();
+            int minute = dateTimeWithNow.getMinute();
+            if (hour < 9 || (hour == 9 && minute < 25)) {
+                targetDate = targetDate.minusDays(1);
+            }
+        }
 
         LocalDate currentDate = targetDate;
         int maxTryCount = 60;
@@ -465,7 +477,8 @@ public class SysHolidayServiceImpl extends ServiceImpl<SysHolidayMapper, SysHoli
         String holidayListJson = CacheUtils.get(CacheKey.HOLIDAY.getKey() + year);
 
         if (StringUtils.isBlank(holidayListJson)) {
-            holidayList = getBaseMapper().selectList(new LambdaQueryWrapper<SysHoliday>().eq(SysHoliday::getYear, year));
+            holidayList = getBaseMapper().selectList(new LambdaQueryWrapper<SysHoliday>()
+                    .eq(year != null, SysHoliday::getYear, year));
             if (CollectionUtils.isEmpty(holidayList)) {
                 holidayDataSyncTask.manualSyncHolidayData(year);
                 holidayList = getBaseMapper().selectList(new LambdaQueryWrapper<SysHoliday>()

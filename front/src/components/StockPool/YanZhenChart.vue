@@ -15,6 +15,7 @@
             :key="idx"
             class="stock-item"
             :class="{ 'stock-item--match': stock.isMatch }"
+            @click="handleItemClick(stock)"
         >
           <div class="stock-info">
             <div class="stock-code">{{ stock.stockCode }}</div>
@@ -52,7 +53,7 @@
 </template>
 
 <script setup>
-import { ref, watch, defineProps } from 'vue'
+import { ref, watch, defineProps, defineEmits } from 'vue'
 import { ElTooltip } from 'element-plus'
 import { filterStocks } from '@/utils/filter'
 
@@ -72,12 +73,15 @@ const props = defineProps({
   }
 })
 
+// 定义emit
+const emit = defineEmits(['select-stock'])
+
 // 响应式数据
 const filteredStockList = ref([])
 
 // 监听股票列表和筛选参数变化
-watch([() => props.stockList, () => props.filterParams], () => {
-  filteredStockList.value = filterStocks(props.stockList, props.filterParams)
+watch([() => props.stockList, () => props.filterParams], ([newStockList, newFilterParams]) => {
+  filteredStockList.value = filterStocks(newStockList, newFilterParams)
 }, { immediate: true })
 
 // 获取梯度颜色（浅色区分）
@@ -151,6 +155,7 @@ const handleItemClick = (stock) => {
   border: 1px solid #e6e6e6;
   border-radius: 4px;
   transition: background-color 0.2s;
+  cursor: pointer;
 }
 
 .stock-item--match {

@@ -92,6 +92,7 @@ public class StockPoolServiceImpl extends ServiceImpl<StockPoolMapper, StockPool
                                                      Integer notShowSt) throws UnsupportedEncodingException {
         // 1. 校验并获取有效交易日
         Result result = getValidateTradeDateResult(tradeDate);
+        log.info("查询 {} 股票池，有效日期：{}", DATE_FORMATTER.format(tradeDate), result.format);
         List<StockPoolDto> stockPoolList = getBaseMapper().selectByTradeDateAndPoolType(result.format, poolType, notShowSt);
 
         // 4. 新增逻辑：查询不到数据时，自动同步指定日期的股票池数据
@@ -327,29 +328,29 @@ public class StockPoolServiceImpl extends ServiceImpl<StockPoolMapper, StockPool
     @Override
     public List<StockPoolDto> lbjjStockPool(LocalDate tradeDate, Integer notShowSt) {
         Result result = getValidateTradeDateResult(tradeDate);
-        List<Integer> stockTypeList = new ArrayList<>();
-        boolean filterSt = notShowSt != null && notShowSt == 1;
-        if (filterSt) {
-            stockTypeList.add(1);
-            stockTypeList.add(5);
-        }
 
         List<StockPool> stockPoolList = getBaseMapper().selectList(new LambdaQueryWrapper<StockPool>()
                 .eq(StockPool::getTradeDate, result.format)
                 .ne(StockPool::getPoolType, "super_stock")
-                .notIn(filterSt, StockPool::getStockType, stockTypeList)
+                .notLike(notShowSt != null && notShowSt == 1, StockPool::getStockReason, "ST")
         );
+
+        if (CollectionUtils.isEmpty(stockPoolList)) {
+            syncAllStockPoolData();
+            stockPoolList = getBaseMapper().selectList(new LambdaQueryWrapper<StockPool>()
+                    .eq(StockPool::getTradeDate, result.format)
+                    .ne(StockPool::getPoolType, "super_stock")
+                    .notLike(notShowSt != null && notShowSt == 1, StockPool::getStockReason, "ST")
+            );
+        }
 
         Map<String, Map<Integer, List<StockPool>>> poolGroupMap = stockPoolList.stream()
                 .peek(StockPool::buildStockNameAndReason)
-                // 1. 排序：跌停池按limitDownDays降序，其他池按limitUpDays降序（符合连板池展示习惯）
-                .sorted(Comparator.comparing(StockPool::getLimitDays).reversed())
-                // 2. 两层分组：第一层poolType，第二层连板天数
                 .collect(Collectors.groupingBy(
-                        StockPool::getPoolType,  // 第一层key：股票池类型（zt/dt/yesterday_zt等）
+                        StockPool::getPoolType,
                         Collectors.groupingBy(
-                                StockPool::getLimitDays,  // 第二层key：连板天数（封装为方法，提升可读性）
-                                Collectors.toList()      // 最终值：同类型同天数的股票列表
+                                StockPool::getLimitDays,
+                                Collectors.toList()
                         )
                 ));
         Map<Integer, List<StockPool>> ztMap = Optional.ofNullable(poolGroupMap.get("zt")).orElse(Collections.emptyMap());
