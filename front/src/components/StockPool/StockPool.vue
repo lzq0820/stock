@@ -18,6 +18,7 @@
         @date-change="handleDateChange"
         @filter-change="handleFilterChange"
     />
+    <ReasonStatus :stock-list="stockList"/>
 
     <!-- 雁阵图 -->
     <YanZhenChart
@@ -46,6 +47,7 @@ import { ElTabs, ElTabPane, ElDrawer } from 'element-plus'
 import FilterPanel from './FilterPanel.vue'
 import YanZhenChart from './YanZhenChart.vue'
 import StockDetail from './StockDetail.vue'
+import ReasonStatus from './ReasonStatus.vue'
 import { getLbjjData, getStockPoolData } from '@/api/stockPool'
 import { formatDate } from '@/utils/date'
 import { extractAllReasons } from '@/utils/filter'
