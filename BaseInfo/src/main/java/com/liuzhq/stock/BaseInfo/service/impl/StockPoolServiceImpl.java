@@ -332,7 +332,7 @@ public class StockPoolServiceImpl extends ServiceImpl<StockPoolMapper, StockPool
         List<StockPool> stockPoolList = getBaseMapper().selectList(new LambdaQueryWrapper<StockPool>()
                 .eq(StockPool::getTradeDate, result.format)
                 .ne(StockPool::getPoolType, "super_stock")
-                .notLike(notShowSt != null && notShowSt == 1, StockPool::getStockReason, "ST")
+                .notLike(notShowSt != null && notShowSt == 1, StockPool::getStockName, "ST")
         );
 
         if (CollectionUtils.isEmpty(stockPoolList)) {
